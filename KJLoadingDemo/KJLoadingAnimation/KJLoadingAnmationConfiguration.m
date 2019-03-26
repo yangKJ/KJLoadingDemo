@@ -35,7 +35,7 @@
     configuration.kMaskingBackgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     configuration.kCoverBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     configuration.kImages = [self kGetFileImageNumsWithAnimationName:@"images"];
-    configuration.kDuration = 1.0;
+    configuration.kDuration = 2.5;
     
     return configuration;
 }
