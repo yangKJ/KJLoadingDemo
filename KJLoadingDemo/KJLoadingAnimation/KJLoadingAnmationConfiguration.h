@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
     KJLoadingAnimationTypeCustom = 0,   /// 自定义
+    KJLoadingAnimationTypePlayImages, /// 播放指定图片
+    KJLoadingAnimationTypeWritingEffect, /// 写文字加载
     KJLoadingAnimationTypeEatDouh,   /// 吃豆豆
     KJLoadingAnimationTypeThreeDots, /// 三个横排闪烁点
     KJLoadingAnimationTypeBallClipRotate, /// 不规则圆旋转
@@ -17,6 +19,8 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
     KJLoadingAnimationTypeTurnedAround, /// 小球转圈圈
     KJLoadingAnimationTypeTwoDots, /// 大小点
     KJLoadingAnimationTypeOutwardWaves, /// 向外扩展波浪
+    KJLoadingAnimationTypeLoveHeart, /// 爱心
+    KJLoadingAnimationTypeElectrocardiogram, /// 心电图
 };
 
 @interface KJLoadingAnmationConfiguration : NSObject
@@ -24,6 +28,13 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
 /** 默认加载动画配置 */
 + (instancetype)defaultLoadingAnmationConfiguration;
 
+/// 播放图片, 有默认数据
+@property(nonatomic,strong) NSArray<UIImage*> *kImages;
+/// 播放图片持续时间, 默认1秒
+@property(nonatomic,assign) CGFloat kDuration;
+
+/// 写文字笔图片
+@property (nonatomic,strong) UIImage *writingPencil;
 /// 自定义动画类名
 @property (nonatomic,strong) NSString *class_name;
 /// 开启随机动画类型 默认NO

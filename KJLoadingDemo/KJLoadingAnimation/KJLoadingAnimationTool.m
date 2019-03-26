@@ -9,12 +9,16 @@
 #import "KJLoadingAnimationTool.h"
 
 #import "KJEatDougAnimation.h" /// 吃豆豆
+#import "KJWritingEffectAnimation.h"
 #import "KJThreeDotsAnimation.h"
 #import "KJBallClipRotateAnimation.h"
 #import "KJLineScalePulseOutAnimation.h"
 #import "KJTurnedAroundAnimation.h"
 #import "KJTwoDotsAnimation.h"
 #import "KJOutwardWavesAnimation.h"
+#import "KJLoveHeartAnimation.h"
+#import "KJElectrocardiogramAnimation.h"
+#import "KJPlayImageAnimation.h"
 
 @interface KJLoadingAnimationTool ()
 @property(nonatomic,strong) KJLoadingAnmationConfiguration *con;
@@ -115,8 +119,16 @@ static KJLoadingAnimationTool *_LoadingAnimationTool = nil;
     [_tool.maskingView addSubview:_tool.animationView];
     
     KJLoadingAnmationConfiguration *anmation = [self activityIndicatorAnimationForAnimationType:_tool.con.kType ClassName:_tool.con.class_name];
-    [anmation setupAnimationInLayer:_tool.animationView.layer withSize:_tool.animationView.frame.size tintColor:_tool.con.kAnmationColor];
+    if (_tool.con.kType == KJLoadingAnimationTypeWritingEffect) {
+        ((KJWritingEffectAnimation*)anmation).writeString = _tool.con.kDisplayString;
+        ((KJWritingEffectAnimation*)anmation).writeFont = _tool.con.kDisplayTitleFont;
+        ((KJWritingEffectAnimation*)anmation).writingPencil = _tool.con.writingPencil;
+    }else if (_tool.con.kType == KJLoadingAnimationTypePlayImages){
+        ((KJPlayImageAnimation*)anmation).images = _tool.con.kImages;
+        ((KJPlayImageAnimation*)anmation).durat = _tool.con.kDuration;
+    }
     _tool.animationView.layer.speed = _tool.con.kSpeed;
+    [anmation setupAnimationInLayer:_tool.animationView.layer withSize:_tool.animationView.frame.size tintColor:_tool.con.kAnmationColor];
 }
 
 /// 停止
@@ -145,6 +157,10 @@ static KJLoadingAnimationTool *_LoadingAnimationTool = nil;
         case KJLoadingAnimationTypeTurnedAround: return [[KJTurnedAroundAnimation alloc] init];
         case KJLoadingAnimationTypeTwoDots: return [[KJTwoDotsAnimation alloc] init];
         case KJLoadingAnimationTypeOutwardWaves: return [[KJOutwardWavesAnimation alloc] init];
+        case KJLoadingAnimationTypeWritingEffect: return [[KJWritingEffectAnimation alloc] init];
+        case KJLoadingAnimationTypeLoveHeart: return [[KJLoveHeartAnimation alloc] init];
+        case KJLoadingAnimationTypeElectrocardiogram: return [[KJElectrocardiogramAnimation alloc] init];
+        case KJLoadingAnimationTypePlayImages: return [[KJPlayImageAnimation alloc] init];
     }
 }
 #pragma mark - lazy
