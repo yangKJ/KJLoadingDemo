@@ -90,6 +90,8 @@
 		68218AF52249CD9E007A5422 /* KJLoadingAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				68218B152249CF5B007A5422 /* KJLoadingAnimation.bundle */,
+				68218AFA2249CD9E007A5422 /* Animations */,
 				68218AF92249CD9E007A5422 /* KJLoadingAnimation.h */,
 				68218AF72249CD9E007A5422 /* KJLoadingAnimation.m */,
 				68218AF82249CD9E007A5422 /* KJLoadingAnmationConfiguration.h */,
@@ -101,7 +103,6 @@
 		68218AFA2249CD9E007A5422 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				68218B152249CF5B007A5422 /* KJLoadingAnimation.bundle */,
 				68218AFB2249CD9E007A5422 /* KJBallClipRotateAnimation.h */,
 				68218B032249CD9E007A5422 /* KJBallClipRotateAnimation.m */,
 				68218B012249CD9E007A5422 /* KJEatDougAnimation.h */,
@@ -147,7 +148,6 @@
 		689748432248C6C9000B42D8 /* KJLoadingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				68218AFA2249CD9E007A5422 /* Animations */,
 				68218AF52249CD9E007A5422 /* KJLoadingAnimation */,
 				689748442248C6C9000B42D8 /* AppDelegate.h */,
 				689748452248C6C9000B42D8 /* AppDelegate.m */,

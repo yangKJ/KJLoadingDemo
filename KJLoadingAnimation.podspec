@@ -12,11 +12,9 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
   s.requires_arc = true
 
-  s.source_files = 'KJLoadingDemo/KJLoadingAnimation/*.{h,m}' # 添加头文件
-
-  s.subspec 'Animations' do |ss|
-    ss.source_files = "KJLoadingDemo/Animations/*.{h,m}" # 添加文件
-    ss.resources    = "KJLoadingDemo/Animations/*.{bundle}" # 添加数据资料
+  s.subspec 'KJLoadingAnimation' do |ss|
+    ss.source_files = "KJLoadingDemo/KJLoadingAnimation/**/*.{h,m}" # 添加文件
+    ss.resources    = "KJLoadingDemo/KJLoadingAnimation/*.{bundle}" # 添加数据资料
   end
   
   s.frameworks = 'Foundation','UIKit','CoreText'
