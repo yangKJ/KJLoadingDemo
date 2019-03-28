@@ -1,12 +1,12 @@
 //
-//  KJLoadingAnimationTool.m
+//  KJLoadingAnimation.m
 //  KJLoadingDemo
 //
 //  Created by 杨科军 on 2019/3/20.
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJLoadingAnimationTool.h"
+#import "KJLoadingAnimation.h"
 
 #import "KJEatDougAnimation.h" /// 吃豆豆
 #import "KJWritingEffectAnimation.h"
@@ -20,7 +20,7 @@
 #import "KJElectrocardiogramAnimation.h"
 #import "KJPlayImageAnimation.h"
 
-@interface KJLoadingAnimationTool ()
+@interface KJLoadingAnimation ()
 @property(nonatomic,strong) KJLoadingAnmationConfiguration *kConfiguration;
 @property(nonatomic,strong) UIView *coverView;
 @property(nonatomic,strong) UIView *maskingView;
@@ -29,38 +29,38 @@
 
 @end
 
-@implementation KJLoadingAnimationTool
-static KJLoadingAnimationTool *_LoadingAnimationTool = nil;
+@implementation KJLoadingAnimation
+static KJLoadingAnimation *_LoadingAnimation = nil;
 
 #pragma mark - 初始化方法
-+ (instancetype)kLoadingAnimationTool{
++ (instancetype)kLoadingAnimation{
     @synchronized (self) {
-        if (!_LoadingAnimationTool) {
-            _LoadingAnimationTool = [[KJLoadingAnimationTool alloc]init];
+        if (!_LoadingAnimation) {
+            _LoadingAnimation = [[KJLoadingAnimation alloc]init];
         }
     }
-    return _LoadingAnimationTool;
+    return _LoadingAnimation;
 }
 
-+ (KJLoadingAnimationTool*)initWithLoadingAnmationConfiguration:(KJLoadingAnmationConfiguration*__nullable)configuration{
++ (KJLoadingAnimation*)initWithLoadingAnmationConfiguration:(KJLoadingAnmationConfiguration*__nullable)configuration{
     @synchronized (self) {
-        if (!_LoadingAnimationTool) {
-            _LoadingAnimationTool = [[KJLoadingAnimationTool alloc]init];
+        if (!_LoadingAnimation) {
+            _LoadingAnimation = [[KJLoadingAnimation alloc]init];
         }
     }
-    _LoadingAnimationTool.kConfiguration = configuration == nil ? [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration] : configuration;
-    return _LoadingAnimationTool;
+    _LoadingAnimation.kConfiguration = configuration == nil ? [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration] : configuration;
+    return _LoadingAnimation;
 }
 
 /// 开始动画
 + (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingAnmationConfiguration*__nullable)configuration{
-    KJLoadingAnimationTool *_tool = [self initWithLoadingAnmationConfiguration:configuration];
+    KJLoadingAnimation *_tool = [self initWithLoadingAnmationConfiguration:configuration];
     [self kSetupWithTool:_tool View:view];
 }
 /// 开始动画  __nullable 可以为空
 - (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingAnmationConfiguration*__nullable)configuration{
     self.kConfiguration = configuration == nil ? [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration] : configuration;
-    [KJLoadingAnimationTool kSetupWithTool:self View:view];
+    [KJLoadingAnimation kSetupWithTool:self View:view];
 }
 /// 停止
 + (void)kLoadingAnimationStopAnimating{
@@ -72,12 +72,12 @@ static KJLoadingAnimationTool *_LoadingAnimationTool = nil;
 }
 /// 停止
 - (void)kLoadingAnimationStopAnimating{
-    [KJLoadingAnimationTool kLoadingAnimationStopAnimating];
+    [KJLoadingAnimation kLoadingAnimationStopAnimating];
 }
 
 #pragma mark - 内部方法
 /// 布局subview
-+ (void)kSetupWithTool:(KJLoadingAnimationTool*)animationTool View:(UIView*)superview{
++ (void)kSetupWithTool:(KJLoadingAnimation*)animationTool View:(UIView*)superview{
     /// 先移出之前的
     [self kRemove];
     
@@ -153,10 +153,10 @@ static KJLoadingAnimationTool *_LoadingAnimationTool = nil;
 }
 
 + (void)kRemove{
-    _LoadingAnimationTool.animationView.layer.speed = 0.0f;
-    _LoadingAnimationTool.animationView.layer.sublayers = nil;
-    [_LoadingAnimationTool.maskingView removeFromSuperview];
-    [_LoadingAnimationTool.coverView removeFromSuperview];
+    _LoadingAnimation.animationView.layer.speed = 0.0f;
+    _LoadingAnimation.animationView.layer.sublayers = nil;
+    [_LoadingAnimation.maskingView removeFromSuperview];
+    [_LoadingAnimation.coverView removeFromSuperview];
 }
 
 /// 获取某个文件夹下面图片张数

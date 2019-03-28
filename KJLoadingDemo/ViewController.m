@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "KJLoadingAnimationTool.h" /// 加载动画工具
+#import "KJLoadingAnimation.h" /// 加载动画工具
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *view1;
@@ -28,7 +28,7 @@
         [arr addObject:[UIImage imageNamed:name]];
     }
     
-    KJLoadingAnimationTool *tool = [[KJLoadingAnimationTool alloc]init];
+    KJLoadingAnimation *tool = [[KJLoadingAnimation alloc]init];
     KJLoadingAnmationConfiguration *loadingConfig = [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration];
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypePlayImages;
@@ -43,14 +43,14 @@
     loadingConfig.kDisplayString = @"";
     loadingConfig.kOpenRandomType = YES;
     loadingConfig.kSize = CGSizeMake(100, 100);
-    [[KJLoadingAnimationTool kLoadingAnimationTool] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
+    [[KJLoadingAnimation kLoadingAnimation] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
 }
 
 - (IBAction)start:(UIButton *)sender {
     [self xxx];
 }
 - (IBAction)end:(UIButton *)sender {
-    [[KJLoadingAnimationTool kLoadingAnimationTool] kLoadingAnimationStopAnimating];
+    [[KJLoadingAnimation kLoadingAnimation] kLoadingAnimationStopAnimating];
 }
 
 @end

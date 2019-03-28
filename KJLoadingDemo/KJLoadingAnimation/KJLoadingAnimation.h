@@ -1,5 +1,5 @@
 //
-//  KJLoadingAnimationTool.h
+//  KJLoadingAnimation.h
 //  KJLoadingDemo
 //
 //  Created by 杨科军 on 2019/3/20.
@@ -17,9 +17,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJLoadingAnimationTool : NSObject
+@interface KJLoadingAnimation : NSObject
 
-+ (instancetype)kLoadingAnimationTool;
++ (instancetype)kLoadingAnimation;
 /// 背景图层，用于外界操作图层
 @property(nonatomic,strong,readonly) UIView *kCoverView;
 /// 开始动画  __nullable 可以为空
