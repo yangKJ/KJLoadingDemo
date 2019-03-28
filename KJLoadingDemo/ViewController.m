@@ -22,10 +22,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    NSMutableArray *arr = [NSMutableArray array];
+    for (NSInteger i = 1; i <= 24 ; i++) {
+        NSString *name = [NSString stringWithFormat:@"as_10%.2ld",i];
+        [arr addObject:[UIImage imageNamed:name]];
+    }
+    
     KJLoadingAnimationTool *tool = [[KJLoadingAnimationTool alloc]init];
     KJLoadingAnmationConfiguration *loadingConfig = [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration];
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypePlayImages;
+    loadingConfig.kImages = arr;
     [tool kLoadingAnimationStartAnimatingWithView:self.view1 Configuration:loadingConfig];
     
     [self xxx];

@@ -1,6 +1,6 @@
 //
 //  KJLoadingAnmationConfiguration.h
-//  优司雇
+//  KJLoadingDemo
 //
 //  Created by 杨科军 on 2019/3/20.
 //  Copyright © 2019 杨科军. All rights reserved.
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
 
 /// 播放图片, 有默认数据
 @property(nonatomic,strong) NSArray<UIImage*> *kImages;
-/// 播放图片持续时间, 默认1秒
+/// 播放图片持续时间, 默认2.5秒
 @property(nonatomic,assign) CGFloat kDuration;
 
 /// 写文字笔图片

@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2019/3/26.
 //  Copyright © 2019 杨科军. All rights reserved.
-//  播放图片
+//  播放指定一组图片
 
 #import "KJLoadingAnmationConfiguration.h"
 

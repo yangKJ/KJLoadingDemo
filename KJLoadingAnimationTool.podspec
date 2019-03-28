@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJLoadingAnimationTool"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Loading Animation."
   s.homepage     = "https://github.com/yangKJ/KJLoadingDemo"
   s.license      = "MIT"

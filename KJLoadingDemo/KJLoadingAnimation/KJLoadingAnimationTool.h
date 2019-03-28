@@ -1,6 +1,6 @@
 //
 //  KJLoadingAnimationTool.h
-//  优司雇
+//  KJLoadingDemo
 //
 //  Created by 杨科军 on 2019/3/20.
 //  Copyright © 2019 杨科军. All rights reserved.
@@ -9,7 +9,7 @@
 /*
  加载等待工具 - 二次封装整理，方便好用
  陆陆续续后续还会添加更多数据源
- 部分数据啊来源于网络
+ 部分数据来源于网络
  */
 
 #import <Foundation/Foundation.h>
