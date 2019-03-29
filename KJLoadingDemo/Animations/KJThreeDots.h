@@ -6,8 +6,8 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //  三个横排闪烁点
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
-@interface KJThreeDots : KJLoadingAnmationConfiguration
+@interface KJThreeDots : KJLoadingConfiguration
 
 @end

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		680EE7EE224DE25E003C1822 /* KJCircleStrokeSpin.m in Sources */ = {isa = PBXBuildFile; fileRef = 680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */; };
-		68218B092249CD9E007A5422 /* KJLoadingAnmationConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AF62249CD9E007A5422 /* KJLoadingAnmationConfiguration.m */; };
+		68218B092249CD9E007A5422 /* KJLoadingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AF62249CD9E007A5422 /* KJLoadingConfiguration.m */; };
 		68218B0A2249CD9E007A5422 /* KJLoadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AF72249CD9E007A5422 /* KJLoadingAnimation.m */; };
 		68218B0B2249CD9E007A5422 /* KJTwoDots.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AFC2249CD9E007A5422 /* KJTwoDots.m */; };
 		68218B0C2249CD9E007A5422 /* KJLineScalePulseOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AFE2249CD9E007A5422 /* KJLineScalePulseOut.m */; };
@@ -39,9 +39,9 @@
 /* Begin PBXFileReference section */
 		680EE7EC224DE25E003C1822 /* KJCircleStrokeSpin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJCircleStrokeSpin.h; sourceTree = "<group>"; };
 		680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJCircleStrokeSpin.m; sourceTree = "<group>"; };
-		68218AF62249CD9E007A5422 /* KJLoadingAnmationConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJLoadingAnmationConfiguration.m; sourceTree = "<group>"; };
+		68218AF62249CD9E007A5422 /* KJLoadingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJLoadingConfiguration.m; sourceTree = "<group>"; };
 		68218AF72249CD9E007A5422 /* KJLoadingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJLoadingAnimation.m; sourceTree = "<group>"; };
-		68218AF82249CD9E007A5422 /* KJLoadingAnmationConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJLoadingAnmationConfiguration.h; sourceTree = "<group>"; };
+		68218AF82249CD9E007A5422 /* KJLoadingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJLoadingConfiguration.h; sourceTree = "<group>"; };
 		68218AF92249CD9E007A5422 /* KJLoadingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJLoadingAnimation.h; sourceTree = "<group>"; };
 		68218AFB2249CD9E007A5422 /* KJBallClipRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJBallClipRotate.h; sourceTree = "<group>"; };
 		68218AFC2249CD9E007A5422 /* KJTwoDots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJTwoDots.m; sourceTree = "<group>"; };
@@ -102,16 +102,15 @@
 		68218AF52249CD9E007A5422 /* KJLoadingAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				68218AFA2249CD9E007A5422 /* KJAnimations */,
 				68218AF92249CD9E007A5422 /* KJLoadingAnimation.h */,
 				68218AF72249CD9E007A5422 /* KJLoadingAnimation.m */,
-				68218AF82249CD9E007A5422 /* KJLoadingAnmationConfiguration.h */,
-				68218AF62249CD9E007A5422 /* KJLoadingAnmationConfiguration.m */,
+				68218AF82249CD9E007A5422 /* KJLoadingConfiguration.h */,
+				68218AF62249CD9E007A5422 /* KJLoadingConfiguration.m */,
 			);
 			path = KJLoadingAnimation;
 			sourceTree = "<group>";
 		};
-		68218AFA2249CD9E007A5422 /* KJAnimations */ = {
+		68218AFA2249CD9E007A5422 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
 				68218B152249CF5B007A5422 /* KJLoadingAnimation.bundle */,
@@ -146,7 +145,7 @@
 				680EE7EC224DE25E003C1822 /* KJCircleStrokeSpin.h */,
 				680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */,
 			);
-			path = KJAnimations;
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		689748382248C6C9000B42D8 = {
@@ -168,6 +167,7 @@
 		689748432248C6C9000B42D8 /* KJLoadingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				68218AFA2249CD9E007A5422 /* Animations */,
 				68218AF52249CD9E007A5422 /* KJLoadingAnimation */,
 				689748442248C6C9000B42D8 /* AppDelegate.h */,
 				689748452248C6C9000B42D8 /* AppDelegate.m */,
@@ -269,7 +269,7 @@
 				68218B1C224A01A9007A5422 /* KJElectrocardiogram.m in Sources */,
 				686D10A9224A0F3F003F219C /* KJPlayImages.m in Sources */,
 				68218B0D2249CD9E007A5422 /* KJTurnedAround.m in Sources */,
-				68218B092249CD9E007A5422 /* KJLoadingAnmationConfiguration.m in Sources */,
+				68218B092249CD9E007A5422 /* KJLoadingConfiguration.m in Sources */,
 				68E367C9224DC2CC0072AC22 /* KJMalpositionRotate.m in Sources */,
 				68218B142249CDEB007A5422 /* KJWritingEffect.m in Sources */,
 				68218B0F2249CD9E007A5422 /* KJBallClipRotate.m in Sources */,

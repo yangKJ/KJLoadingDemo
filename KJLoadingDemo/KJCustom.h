@@ -6,11 +6,11 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJCustom : KJLoadingAnmationConfiguration
+@interface KJCustom : KJLoadingConfiguration
 
 @end
 

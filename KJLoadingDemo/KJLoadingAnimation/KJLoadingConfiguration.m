@@ -6,13 +6,13 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
-@implementation KJLoadingAnmationConfiguration
+@implementation KJLoadingConfiguration
 
-+ (instancetype)defaultLoadingAnmationConfiguration{
++ (instancetype)defaultLoadingConfiguration{
     CGFloat kw = [UIScreen mainScreen].bounds.size.width;
-    KJLoadingAnmationConfiguration *configuration = [KJLoadingAnmationConfiguration new];
+    KJLoadingConfiguration *configuration = [KJLoadingConfiguration new];
     /// 默认值
     configuration.kOpenRandomType = NO;
     configuration.kRandomTypeArray = @[@(KJLoadingAnimationTypeEatDouh),

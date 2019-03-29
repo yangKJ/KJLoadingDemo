@@ -6,11 +6,11 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //  写文字
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJWritingEffect : KJLoadingAnmationConfiguration
+@interface KJWritingEffect : KJLoadingConfiguration
 
 @property(nonatomic,strong) NSString *writeString;
 @property (nonatomic,strong) UIFont *writeFont;

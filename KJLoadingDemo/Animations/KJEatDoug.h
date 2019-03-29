@@ -6,8 +6,8 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //  吃豆豆动画
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
-@interface KJEatDoug : KJLoadingAnmationConfiguration
+@interface KJEatDoug : KJLoadingConfiguration
 
 @end

@@ -1,16 +1,16 @@
 //
-//  KJBallPulseAnimation.h
+//  KJTwoDotsAnimation.h
 //  KJLoadingDemo
 //
 //  Created by 杨科军 on 2019/3/20.
 //  Copyright © 2019 杨科军. All rights reserved.
-//  不规则圆旋转
+//  2个大小点互闪
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJBallClipRotate : KJLoadingAnmationConfiguration
+@interface KJTwoDots : KJLoadingConfiguration
 
 @end
 

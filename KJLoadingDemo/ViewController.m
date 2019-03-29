@@ -29,7 +29,7 @@
     }
     
     KJLoadingAnimation *tool = [[KJLoadingAnimation alloc]init];
-    KJLoadingAnmationConfiguration *loadingConfig = [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration];
+    KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypeGradientSnake;
 //    loadingConfig.kImages = arr;
@@ -39,7 +39,7 @@
 }
 
 - (void)xxx{
-    KJLoadingAnmationConfiguration *loadingConfig = [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration];
+    KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
     loadingConfig.kDisplayString = @"";
     loadingConfig.kOpenRandomType = YES;
     loadingConfig.kSize = CGSizeMake(100, 100);

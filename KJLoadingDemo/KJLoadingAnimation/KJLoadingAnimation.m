@@ -25,7 +25,7 @@
 #import "KJCircleStrokeSpin.h"
 
 @interface KJLoadingAnimation ()
-@property(nonatomic,strong) KJLoadingAnmationConfiguration *kConfiguration;
+@property(nonatomic,strong) KJLoadingConfiguration *kConfiguration;
 @property(nonatomic,strong) UIView *coverView;
 @property(nonatomic,strong) UIView *maskingView;
 @property(nonatomic,strong) UIView *animationView;
@@ -46,24 +46,24 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
     return _LoadingAnimation;
 }
 
-+ (KJLoadingAnimation*)initWithLoadingAnmationConfiguration:(KJLoadingAnmationConfiguration*__nullable)configuration{
++ (KJLoadingAnimation*)initWithLoadingAnmationConfiguration:(KJLoadingConfiguration*__nullable)configuration{
     @synchronized (self) {
         if (!_LoadingAnimation) {
             _LoadingAnimation = [[KJLoadingAnimation alloc]init];
         }
     }
-    _LoadingAnimation.kConfiguration = configuration == nil ? [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration] : configuration;
+    _LoadingAnimation.kConfiguration = configuration == nil ? [KJLoadingConfiguration defaultLoadingConfiguration] : configuration;
     return _LoadingAnimation;
 }
 
 /// 开始动画
-+ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingAnmationConfiguration*__nullable)configuration{
++ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration*__nullable)configuration{
     KJLoadingAnimation *_tool = [self initWithLoadingAnmationConfiguration:configuration];
     [self kSetupWithTool:_tool View:view];
 }
 /// 开始动画  __nullable 可以为空
-- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingAnmationConfiguration*__nullable)configuration{
-    self.kConfiguration = configuration == nil ? [KJLoadingAnmationConfiguration defaultLoadingAnmationConfiguration] : configuration;
+- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration*__nullable)configuration{
+    self.kConfiguration = configuration == nil ? [KJLoadingConfiguration defaultLoadingConfiguration] : configuration;
     [KJLoadingAnimation kSetupWithTool:self View:view];
 }
 /// 停止
@@ -122,7 +122,7 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
     
     [animationTool.maskingView addSubview:animationTool.animationView];
     
-    KJLoadingAnmationConfiguration *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.kConfiguration.kType ClassName:animationTool.kConfiguration.class_name];
+    KJLoadingConfiguration *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.kConfiguration.kType ClassName:animationTool.kConfiguration.class_name];
     if (animationTool.kConfiguration.kType == KJLoadingAnimationTypeWritingEffect) {
         ((KJWritingEffect*)anmation).writeString = animationTool.kConfiguration.kDisplayString;
         ((KJWritingEffect*)anmation).writeFont = animationTool.kConfiguration.kDisplayTitleFont;
@@ -139,7 +139,7 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
 }
 
 /// 获取对应的动画素材类
-+ (KJLoadingAnmationConfiguration*)kGetAnimationMaterialWithAnimationType:(KJLoadingAnimationType)type ClassName:(NSString*)class_name{
++ (KJLoadingConfiguration*)kGetAnimationMaterialWithAnimationType:(KJLoadingAnimationType)type ClassName:(NSString*)class_name{
     switch (type) {
         case KJLoadingAnimationTypeCustom: return [[NSClassFromString(class_name) alloc] init];
         case KJLoadingAnimationTypeEatDouh: return [[KJEatDoug alloc] init];

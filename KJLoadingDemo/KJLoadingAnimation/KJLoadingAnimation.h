@@ -13,7 +13,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,12 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 背景图层，用于外界操作图层
 @property(nonatomic,strong,readonly) UIView *kCoverView;
 /// 开始动画  __nullable 可以为空
-+ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingAnmationConfiguration*__nullable)configuration;
++ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration*__nullable)configuration;
 /// 停止
 + (void)kLoadingAnimationStopAnimating;
 
 /// 开始动画  __nullable 可以为空
-- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingAnmationConfiguration*__nullable)configuration;
+- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration*__nullable)configuration;
 /// 停止
 - (void)kLoadingAnimationStopAnimating;
 

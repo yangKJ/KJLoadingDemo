@@ -6,11 +6,11 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //  播放指定一组图片
 
-#import "KJLoadingAnmationConfiguration.h"
+#import "KJLoadingConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJPlayImages : KJLoadingAnmationConfiguration
+@interface KJPlayImages : KJLoadingConfiguration
 /// 播放图片
 @property(nonatomic,strong) NSArray *images;
 /// 播放图片持续时间

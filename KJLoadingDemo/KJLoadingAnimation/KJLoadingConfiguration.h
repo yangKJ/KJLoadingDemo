@@ -27,10 +27,10 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
     KJLoadingAnimationTypeCircleStrokeSpin, /// 圆旋转
 };
 
-@interface KJLoadingAnmationConfiguration : NSObject
+@interface KJLoadingConfiguration : NSObject
 
 /** 默认加载动画配置 */
-+ (instancetype)defaultLoadingAnmationConfiguration;
++ (instancetype)defaultLoadingConfiguration;
 
 /// 播放图片, 有默认数据
 @property(nonatomic,strong) NSArray<UIImage*> *kImages;
