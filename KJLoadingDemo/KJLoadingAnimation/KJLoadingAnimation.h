@@ -10,6 +10,9 @@
  加载等待工具 - 二次封装整理，方便好用
  陆陆续续后续还会添加更多数据源
  部分数据来源于网络
+ 
+ 使用方法：
+ 可在 KJLoadingConfiguration 设置相关配置信息
  */
 
 #import <Foundation/Foundation.h>
