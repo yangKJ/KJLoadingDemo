@@ -40,7 +40,16 @@
     groupAnimation.repeatCount = INFINITY;
     groupAnimation.removedOnCompletion = NO;
     groupAnimation.fillMode = kCAFillModeForwards;
-    CALayer *circle = [WBActivityIndicatorShape layerWith:size color:color type:WBActivityIndicatorStrokeShapeType];
+    CAShapeLayer *circle = [CAShapeLayer layer];
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    CGFloat lineWidth = 2.f;
+    [path addArcWithCenter:CGPointMake(size.width / 2.f, size.height / 2.f) radius:size.width / 2.f startAngle:-M_PI / 2.f endAngle:M_PI + M_PI / 2.f clockwise:YES];
+    circle.fillColor = nil;
+    circle.strokeColor = tintColor.CGColor;
+    circle.lineWidth = lineWidth;
+    circle.backgroundColor = nil;
+    circle.path = path.CGPath;
+    circle.frame = CGRectMake(0, 0, size.width, size.height);
     [circle addAnimation:groupAnimation forKey:@"animation"];
     
     CGRect rect = layer.bounds;

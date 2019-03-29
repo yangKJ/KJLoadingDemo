@@ -6,7 +6,7 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //  圆旋转
 
-#import <UIKit/UIKit.h>
+#import "KJLoadingConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

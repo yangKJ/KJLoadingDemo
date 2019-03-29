@@ -31,7 +31,7 @@
     KJLoadingAnimation *tool = [[KJLoadingAnimation alloc]init];
     KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
 //    loadingConfig.class_name = @"KJCustom";
-    loadingConfig.kType = KJLoadingAnimationTypeGradientSnake;
+    loadingConfig.kType = KJLoadingAnimationTypeCircleStrokeSpin;
 //    loadingConfig.kImages = arr;
     [tool kLoadingAnimationStartAnimatingWithView:self.view1 Configuration:loadingConfig];
     

@@ -18,9 +18,9 @@
 		68218B102249CD9E007A5422 /* KJOutwardWaves.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B052249CD9E007A5422 /* KJOutwardWaves.m */; };
 		68218B112249CD9E007A5422 /* KJEatDoug.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B072249CD9E007A5422 /* KJEatDoug.m */; };
 		68218B142249CDEB007A5422 /* KJWritingEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B132249CDEB007A5422 /* KJWritingEffect.m */; };
-		68218B162249CF5B007A5422 /* KJLoadingAnimation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68218B152249CF5B007A5422 /* KJLoadingAnimation.bundle */; };
 		68218B192249F0A3007A5422 /* KJLoveHeart.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B182249F0A3007A5422 /* KJLoveHeart.m */; };
 		68218B1C224A01A9007A5422 /* KJElectrocardiogram.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B1B224A01A9007A5422 /* KJElectrocardiogram.m */; };
+		685E7DC5224DF43900275826 /* KJLoadingAnimation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 685E7DC4224DF43900275826 /* KJLoadingAnimation.bundle */; };
 		686D10A9224A0F3F003F219C /* KJPlayImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 686D10A8224A0F3F003F219C /* KJPlayImages.m */; };
 		689748462248C6C9000B42D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 689748452248C6C9000B42D8 /* AppDelegate.m */; };
 		689748492248C6C9000B42D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689748482248C6C9000B42D8 /* ViewController.m */; };
@@ -59,11 +59,11 @@
 		68218B082249CD9E007A5422 /* KJThreeDots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJThreeDots.h; sourceTree = "<group>"; };
 		68218B122249CDEB007A5422 /* KJWritingEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJWritingEffect.h; sourceTree = "<group>"; };
 		68218B132249CDEB007A5422 /* KJWritingEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJWritingEffect.m; sourceTree = "<group>"; };
-		68218B152249CF5B007A5422 /* KJLoadingAnimation.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = KJLoadingAnimation.bundle; path = ../KJLoadingAnimation.bundle; sourceTree = "<group>"; };
 		68218B172249F0A3007A5422 /* KJLoveHeart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJLoveHeart.h; sourceTree = "<group>"; };
 		68218B182249F0A3007A5422 /* KJLoveHeart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJLoveHeart.m; sourceTree = "<group>"; };
 		68218B1A224A01A9007A5422 /* KJElectrocardiogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJElectrocardiogram.h; sourceTree = "<group>"; };
 		68218B1B224A01A9007A5422 /* KJElectrocardiogram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJElectrocardiogram.m; sourceTree = "<group>"; };
+		685E7DC4224DF43900275826 /* KJLoadingAnimation.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KJLoadingAnimation.bundle; sourceTree = "<group>"; };
 		686D10A7224A0F3F003F219C /* KJPlayImages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJPlayImages.h; sourceTree = "<group>"; };
 		686D10A8224A0F3F003F219C /* KJPlayImages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJPlayImages.m; sourceTree = "<group>"; };
 		689748412248C6C9000B42D8 /* KJLoadingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJLoadingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +102,7 @@
 		68218AF52249CD9E007A5422 /* KJLoadingAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				685E7DC4224DF43900275826 /* KJLoadingAnimation.bundle */,
 				68218AF92249CD9E007A5422 /* KJLoadingAnimation.h */,
 				68218AF72249CD9E007A5422 /* KJLoadingAnimation.m */,
 				68218AF82249CD9E007A5422 /* KJLoadingConfiguration.h */,
@@ -114,7 +115,6 @@
 		68218AFA2249CD9E007A5422 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				68218B152249CF5B007A5422 /* KJLoadingAnimation.bundle */,
 				68218AFB2249CD9E007A5422 /* KJBallClipRotate.h */,
 				68218B032249CD9E007A5422 /* KJBallClipRotate.m */,
 				68218B012249CD9E007A5422 /* KJEatDoug.h */,
@@ -243,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68218B162249CF5B007A5422 /* KJLoadingAnimation.bundle in Resources */,
+				685E7DC5224DF43900275826 /* KJLoadingAnimation.bundle in Resources */,
 				68B571662248DBDA00C69A75 /* KJLoadingAnimation.podspec in Resources */,
 				689748512248C6CB000B42D8 /* LaunchScreen.storyboard in Resources */,
 				6897484E2248C6CB000B42D8 /* Assets.xcassets in Resources */,
