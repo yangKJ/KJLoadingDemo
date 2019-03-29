@@ -3,7 +3,7 @@
 * 这个工程提供了一些iOS开发中用到的加载控件    
 基于CALayer封装加载等待动画 - 加载等待工具    
 陆陆续续后续还会添加更多数据源    
-部分数据啊来源于网络    
+部分数据来源于网络    
 
 ### Cocoapods安装
 ```ruby
@@ -50,7 +50,7 @@ withSize:(CGSize)size tintColor:(UIColor *)tintColor;
 
 ```ruby
 KJLoadingConfiguration *loadingConfig = 
-[KJLoadingConfiguration defaultLoadingAnmationConfiguration];
+[KJLoadingConfiguration defaultLoadingConfiguration];
 loadingConfig.class_name = @"KJCustom";  /// 继承的动画素材类名
 loadingConfig.kType = KJLoadingAnimationTypeCustom;
 [KJLoadingAnimation kLoadingAnimationStartAnimatingWithView:self.view 
