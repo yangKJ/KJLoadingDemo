@@ -8,17 +8,21 @@
 
 #import "KJLoadingAnimation.h"
 
-#import "KJEatDougAnimation.h" /// 吃豆豆
-#import "KJWritingEffectAnimation.h"
-#import "KJThreeDotsAnimation.h"
-#import "KJBallClipRotateAnimation.h"
-#import "KJLineScalePulseOutAnimation.h"
-#import "KJTurnedAroundAnimation.h"
-#import "KJTwoDotsAnimation.h"
-#import "KJOutwardWavesAnimation.h"
-#import "KJLoveHeartAnimation.h"
-#import "KJElectrocardiogramAnimation.h"
-#import "KJPlayImageAnimation.h"
+#import "KJEatDoug.h" /// 吃豆豆
+#import "KJWritingEffect.h"
+#import "KJThreeDots.h"
+#import "KJBallClipRotate.h"
+#import "KJLineScalePulseOut.h"
+#import "KJTurnedAround.h"
+#import "KJTwoDots.h"
+#import "KJOutwardWaves.h"
+#import "KJLoveHeart.h"
+#import "KJElectrocardiogram.h"
+#import "KJPlayImages.h"
+#import "KJHourGlass.h"
+#import "KJMalpositionRotate.h"
+#import "KJGradientSnake.h"
+#import "KJCircleStrokeSpin.h"
 
 @interface KJLoadingAnimation ()
 @property(nonatomic,strong) KJLoadingAnmationConfiguration *kConfiguration;
@@ -120,15 +124,15 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
     
     KJLoadingAnmationConfiguration *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.kConfiguration.kType ClassName:animationTool.kConfiguration.class_name];
     if (animationTool.kConfiguration.kType == KJLoadingAnimationTypeWritingEffect) {
-        ((KJWritingEffectAnimation*)anmation).writeString = animationTool.kConfiguration.kDisplayString;
-        ((KJWritingEffectAnimation*)anmation).writeFont = animationTool.kConfiguration.kDisplayTitleFont;
-        ((KJWritingEffectAnimation*)anmation).writingPencil = animationTool.kConfiguration.writingPencil;
+        ((KJWritingEffect*)anmation).writeString = animationTool.kConfiguration.kDisplayString;
+        ((KJWritingEffect*)anmation).writeFont = animationTool.kConfiguration.kDisplayTitleFont;
+        ((KJWritingEffect*)anmation).writingPencil = animationTool.kConfiguration.writingPencil;
     }else if (animationTool.kConfiguration.kType == KJLoadingAnimationTypePlayImages){
         if (animationTool.kConfiguration.kImages == nil || animationTool.kConfiguration.kImages.count == 0) {
             animationTool.kConfiguration.kImages = [self kGetFileImageNumsWithAnimationName:@"images"];
         }
-        ((KJPlayImageAnimation*)anmation).images = animationTool.kConfiguration.kImages;
-        ((KJPlayImageAnimation*)anmation).durat = animationTool.kConfiguration.kDuration;
+        ((KJPlayImages*)anmation).images = animationTool.kConfiguration.kImages;
+        ((KJPlayImages*)anmation).durat = animationTool.kConfiguration.kDuration;
     }
     animationTool.animationView.layer.speed = animationTool.kConfiguration.kSpeed;
     [anmation setupAnimationInLayer:animationTool.animationView.layer withSize:animationTool.animationView.frame.size tintColor:animationTool.kConfiguration.kAnmationColor];
@@ -138,17 +142,21 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
 + (KJLoadingAnmationConfiguration*)kGetAnimationMaterialWithAnimationType:(KJLoadingAnimationType)type ClassName:(NSString*)class_name{
     switch (type) {
         case KJLoadingAnimationTypeCustom: return [[NSClassFromString(class_name) alloc] init];
-        case KJLoadingAnimationTypeEatDouh: return [[KJEatDougAnimation alloc] init];
-        case KJLoadingAnimationTypeThreeDots: return [[KJThreeDotsAnimation alloc] init];
-        case KJLoadingAnimationTypeBallClipRotate: return [[KJBallClipRotateAnimation alloc] init];
-        case KJLoadingAnimationTypeLineScalePulseOut: return [[KJLineScalePulseOutAnimation alloc] init];
-        case KJLoadingAnimationTypeTurnedAround: return [[KJTurnedAroundAnimation alloc] init];
-        case KJLoadingAnimationTypeTwoDots: return [[KJTwoDotsAnimation alloc] init];
-        case KJLoadingAnimationTypeOutwardWaves: return [[KJOutwardWavesAnimation alloc] init];
-        case KJLoadingAnimationTypeWritingEffect: return [[KJWritingEffectAnimation alloc] init];
-        case KJLoadingAnimationTypeLoveHeart: return [[KJLoveHeartAnimation alloc] init];
-        case KJLoadingAnimationTypeElectrocardiogram: return [[KJElectrocardiogramAnimation alloc] init];
-        case KJLoadingAnimationTypePlayImages: return [[KJPlayImageAnimation alloc] init];
+        case KJLoadingAnimationTypeEatDouh: return [[KJEatDoug alloc] init];
+        case KJLoadingAnimationTypeThreeDots: return [[KJThreeDots alloc] init];
+        case KJLoadingAnimationTypeBallClipRotate: return [[KJBallClipRotate alloc] init];
+        case KJLoadingAnimationTypeLineScalePulseOut: return [[KJLineScalePulseOut alloc] init];
+        case KJLoadingAnimationTypeTurnedAround: return [[KJTurnedAround alloc] init];
+        case KJLoadingAnimationTypeTwoDots: return [[KJTwoDots alloc] init];
+        case KJLoadingAnimationTypeOutwardWaves: return [[KJOutwardWaves alloc] init];
+        case KJLoadingAnimationTypeWritingEffect: return [[KJWritingEffect alloc] init];
+        case KJLoadingAnimationTypeLoveHeart: return [[KJLoveHeart alloc] init];
+        case KJLoadingAnimationTypeElectrocardiogram: return [[KJElectrocardiogram alloc] init];
+        case KJLoadingAnimationTypePlayImages: return [[KJPlayImages alloc] init];
+        case KJLoadingAnimationTypeHourGlass: return [KJHourGlass new];
+        case KJLoadingAnimationTypeMalpositionRotate: return [KJMalpositionRotate new];
+        case KJLoadingAnimationTypeGradientSnake: return [KJGradientSnake new];
+        case KJLoadingAnimationTypeCircleStrokeSpin: return [KJCircleStrokeSpin new];
     }
 }
 

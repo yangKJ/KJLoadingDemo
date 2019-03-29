@@ -6,9 +6,9 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJThreeDotsAnimation.h"
+#import "KJThreeDots.h"
 
-@implementation KJThreeDotsAnimation
+@implementation KJThreeDots
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     NSTimeInterval beginTime = CACurrentMediaTime();
     NSTimeInterval duration = 0.5f;

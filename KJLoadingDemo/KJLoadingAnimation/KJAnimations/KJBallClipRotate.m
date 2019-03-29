@@ -6,9 +6,9 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJBallClipRotateAnimation.h"
+#import "KJBallClipRotate.h"
 
-@implementation KJBallClipRotateAnimation
+@implementation KJBallClipRotate
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     CGFloat duration = 1.0f;
     CAMediaTimingFunction *timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.09f :0.57f :0.49f :0.9f];

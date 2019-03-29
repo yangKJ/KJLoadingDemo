@@ -6,9 +6,9 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJTurnedAroundAnimation.h"
+#import "KJTurnedAround.h"
 
-@implementation KJTurnedAroundAnimation
+@implementation KJTurnedAround
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     CGFloat circleSpacing = -2;
     CGFloat circleSize = (size.width - 4 * circleSpacing) / 5;

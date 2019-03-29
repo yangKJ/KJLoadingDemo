@@ -1,16 +1,16 @@
 //
-//  KJBallScaleMultipleAnimation.h
+//  KJAA.h
 //  KJLoadingDemo
 //
-//  Created by 杨科军 on 2019/3/20.
+//  Created by 杨科军 on 2019/3/29.
 //  Copyright © 2019 杨科军. All rights reserved.
-//  向外扩展波浪
+//  错位旋转
 
 #import "KJLoadingAnmationConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJOutwardWavesAnimation : KJLoadingAnmationConfiguration
+@interface KJMalpositionRotate : KJLoadingAnmationConfiguration
 
 @end
 

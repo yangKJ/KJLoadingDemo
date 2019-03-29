@@ -6,9 +6,9 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJEatDougAnimation.h"
+#import "KJEatDoug.h"
 
-@implementation KJEatDougAnimation
+@implementation KJEatDoug
 
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     NSTimeInterval beginTime = CACurrentMediaTime();

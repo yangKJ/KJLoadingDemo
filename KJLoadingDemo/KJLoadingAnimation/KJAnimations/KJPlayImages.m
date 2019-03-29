@@ -23,16 +23,16 @@ margin = 布局
  frame = 大小位置
  hidden = 显示隐藏
 */
-#import "KJPlayImageAnimation.h"
+#import "KJPlayImages.h"
 
-@interface KJPlayImageAnimation ()<CAAnimationDelegate>{
+@interface KJPlayImages ()<CAAnimationDelegate>{
 //    int _index;
     CALayer *_layer;
 }
 
 @end
 
-@implementation KJPlayImageAnimation
+@implementation KJPlayImages
 
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     CGFloat w = size.width;

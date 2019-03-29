@@ -22,6 +22,8 @@
                                        @(KJLoadingAnimationTypeTurnedAround),
                                        @(KJLoadingAnimationTypeTwoDots),
                                        @(KJLoadingAnimationTypeOutwardWaves),
+                                       @(KJLoadingAnimationTypeHourGlass),
+                                       @(KJLoadingAnimationTypeCircleStrokeSpin),
                                        ];
     configuration.kType = KJLoadingAnimationTypeEatDouh;
     configuration.kSpeed = 1.0;

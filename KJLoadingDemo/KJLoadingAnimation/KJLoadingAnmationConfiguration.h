@@ -21,6 +21,10 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
     KJLoadingAnimationTypeOutwardWaves, /// 向外扩展波浪
     KJLoadingAnimationTypeLoveHeart, /// 爱心
     KJLoadingAnimationTypeElectrocardiogram, /// 心电图
+    KJLoadingAnimationTypeHourGlass, /// 时间沙漏
+    KJLoadingAnimationTypeMalpositionRotate, /// 错位旋转
+    KJLoadingAnimationTypeGradientSnake, /// 渐变蛇
+    KJLoadingAnimationTypeCircleStrokeSpin, /// 圆旋转
 };
 
 @interface KJLoadingAnmationConfiguration : NSObject

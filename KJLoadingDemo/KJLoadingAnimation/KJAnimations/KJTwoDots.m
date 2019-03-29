@@ -6,9 +6,9 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJTwoDotsAnimation.h"
+#import "KJTwoDots.h"
 
-@implementation KJTwoDotsAnimation
+@implementation KJTwoDots
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     NSTimeInterval beginTime = CACurrentMediaTime();
     

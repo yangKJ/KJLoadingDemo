@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJLoveHeartAnimation : KJLoadingAnmationConfiguration
+@interface KJLoveHeart : KJLoadingAnmationConfiguration
 
 @end
 

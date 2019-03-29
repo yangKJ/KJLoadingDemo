@@ -6,9 +6,9 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJOutwardWavesAnimation.h"
+#import "KJOutwardWaves.h"
 
-@implementation KJOutwardWavesAnimation
+@implementation KJOutwardWaves
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
     CGFloat duration = 1.0f;
     NSArray *beginTimes = @[@0.0f, @0.2f, @0.4f];

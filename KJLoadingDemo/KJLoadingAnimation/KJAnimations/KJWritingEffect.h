@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJWritingEffectAnimation : KJLoadingAnmationConfiguration
+@interface KJWritingEffect : KJLoadingAnmationConfiguration
 
 @property(nonatomic,strong) NSString *writeString;
 @property (nonatomic,strong) UIFont *writeFont;

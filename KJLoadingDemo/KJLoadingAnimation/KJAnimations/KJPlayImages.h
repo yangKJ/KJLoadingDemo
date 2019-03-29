@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJPlayImageAnimation : KJLoadingAnmationConfiguration
+@interface KJPlayImages : KJLoadingAnmationConfiguration
 /// 播放图片
 @property(nonatomic,strong) NSArray *images;
 /// 播放图片持续时间

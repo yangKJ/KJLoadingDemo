@@ -1,16 +1,16 @@
 //
-//  KJTwoDotsAnimation.h
+//  KJSnake.h
 //  KJLoadingDemo
 //
-//  Created by 杨科军 on 2019/3/20.
+//  Created by 杨科军 on 2019/3/29.
 //  Copyright © 2019 杨科军. All rights reserved.
-//  2个大小点互闪
+//  渐变蛇
 
 #import "KJLoadingAnmationConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJTwoDotsAnimation : KJLoadingAnmationConfiguration
+@interface KJGradientSnake : KJLoadingAnmationConfiguration
 
 @end
 
