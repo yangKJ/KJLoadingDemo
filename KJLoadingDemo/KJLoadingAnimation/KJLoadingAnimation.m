@@ -30,7 +30,7 @@
 @property(nonatomic,strong) UIView *maskingView;
 @property(nonatomic,strong) UIView *animationView;
 @property(nonatomic,strong) UILabel *animationLabel;
-
+@property(nonatomic,strong) UIView *superView;
 @end
 
 @implementation KJLoadingAnimation
@@ -68,11 +68,23 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
 }
 /// 停止
 + (void)kLoadingAnimationStopAnimating{
-    //    [UIView animateWithDuration:0.2 animations:^{
-    //        _LoadingAnimationTool.coverView.hidden = YES;
-    //    } completion:^(BOOL finished) {
-    [self kRemove];
-    //    }];
+    if (_LoadingAnimation.kConfiguration.kDismiss) {
+        /// block代码块动画
+        [UIView animateWithDuration:_LoadingAnimation.kConfiguration.kDismissTime animations:^{
+            //执行的动画
+            _LoadingAnimation.coverView.frame = CGRectMake(0, 0, 10, 10);
+            _LoadingAnimation.coverView.center = CGPointMake(_LoadingAnimation.superView.frame.size.width/2, _LoadingAnimation.superView.frame.size.height/2);
+            CGFloat kw = _LoadingAnimation.kConfiguration.kSize.width / [UIScreen mainScreen].bounds.size.width * 10.;
+            _LoadingAnimation.maskingView.frame = CGRectMake(0, 0, kw, kw);
+            _LoadingAnimation.maskingView.center = CGPointMake(_LoadingAnimation.maskingView.frame.size.width, _LoadingAnimation.maskingView.frame.size.height);
+        } completion:^(BOOL finished) {
+            //动画执行完毕后的首位操作
+            [KJLoadingAnimation kRemove];
+        }];
+        return;
+    }
+    
+    [KJLoadingAnimation kRemove];
 }
 /// 停止
 - (void)kLoadingAnimationStopAnimating{
@@ -82,6 +94,8 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
 #pragma mark - 内部方法
 /// 布局subview
 + (void)kSetupWithTool:(KJLoadingAnimation*)animationTool View:(UIView*)superview{
+    /// 保存父视图
+    animationTool.superView = superview;
     /// 先移出之前的
     [self kRemove];
     

@@ -30,6 +30,7 @@
     
     KJLoadingAnimation *tool = [[KJLoadingAnimation alloc]init];
     KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
+    loadingConfig.kDisplayString = @"测试数据加载中...";
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypeCircleStrokeSpin;
 //    loadingConfig.kImages = arr;
@@ -43,6 +44,7 @@
     loadingConfig.kDisplayString = @"";
     loadingConfig.kOpenRandomType = YES;
     loadingConfig.kSize = CGSizeMake(100, 100);
+    loadingConfig.kDismiss = YES;
     [[KJLoadingAnimation kLoadingAnimation] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
 }
 

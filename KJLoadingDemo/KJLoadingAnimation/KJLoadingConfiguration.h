@@ -65,6 +65,11 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
 @property (nonatomic,strong) UIColor *kMaskingBackgroundColor;
 /// 遮盖层背景颜色 默认白色50%
 @property (nonatomic,strong) UIColor *kCoverBackgroundColor;
+/// 开启消失动画 默认NO
+@property (nonatomic,assign) BOOL kDismiss;
+/// 开启消失动画时间 默认1秒
+@property (nonatomic,assign) BOOL kDismissTime;
+
 
 /********************************** 公用方法 - 用于子类重载 ******************************************/
 - (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor;

@@ -37,6 +37,8 @@
     configuration.kMaskingBackgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     configuration.kCoverBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     configuration.kDuration = 2.5;
+    configuration.kDismiss = NO;
+    configuration.kDismissTime = 1.0;
     
     return configuration;
 }
