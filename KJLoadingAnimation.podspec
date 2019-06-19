@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJLoadingAnimation"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Loading Animation."
   s.homepage     = "https://github.com/yangKJ/KJLoadingDemo"
   s.license      = "MIT"
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'KJProgressHUD' do |a|
     a.source_files = "KJLoadingDemo/KJProgressHUD/**/*.{h,m}" # 添加文件
-    a.resources = "KJLoadingDemo/KJProgressHUD/**/*.{bundle}" # 添加数据资料
     a.dependency 'KJLoadingAnimation/KJLoadingAnimation'
   end
 
