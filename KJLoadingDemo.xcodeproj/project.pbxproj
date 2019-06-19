@@ -21,6 +21,10 @@
 		68218B192249F0A3007A5422 /* KJLoveHeart.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B182249F0A3007A5422 /* KJLoveHeart.m */; };
 		68218B1C224A01A9007A5422 /* KJElectrocardiogram.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218B1B224A01A9007A5422 /* KJElectrocardiogram.m */; };
 		685E7DC5224DF43900275826 /* KJLoadingAnimation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 685E7DC4224DF43900275826 /* KJLoadingAnimation.bundle */; };
+		6860DEE42256D6A6007C062D /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6860DEE32256D6A6007C062D /* HUDViewController.m */; };
+		6860DEE92256D894007C062D /* KJProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6860DEE82256D894007C062D /* KJProgressHUD.m */; };
+		6860DEEC2256D929007C062D /* KJProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6860DEEB2256D929007C062D /* KJProgressConfiguration.m */; };
+		6860DEEF225710A6007C062D /* KJProgressRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6860DEEE225710A6007C062D /* KJProgressRight.m */; };
 		686D10A9224A0F3F003F219C /* KJPlayImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 686D10A8224A0F3F003F219C /* KJPlayImages.m */; };
 		689748462248C6C9000B42D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 689748452248C6C9000B42D8 /* AppDelegate.m */; };
 		689748492248C6C9000B42D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689748482248C6C9000B42D8 /* ViewController.m */; };
@@ -64,6 +68,14 @@
 		68218B1A224A01A9007A5422 /* KJElectrocardiogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJElectrocardiogram.h; sourceTree = "<group>"; };
 		68218B1B224A01A9007A5422 /* KJElectrocardiogram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJElectrocardiogram.m; sourceTree = "<group>"; };
 		685E7DC4224DF43900275826 /* KJLoadingAnimation.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KJLoadingAnimation.bundle; sourceTree = "<group>"; };
+		6860DEE22256D6A6007C062D /* HUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		6860DEE32256D6A6007C062D /* HUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		6860DEE72256D894007C062D /* KJProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJProgressHUD.h; sourceTree = "<group>"; };
+		6860DEE82256D894007C062D /* KJProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJProgressHUD.m; sourceTree = "<group>"; };
+		6860DEEA2256D929007C062D /* KJProgressConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJProgressConfiguration.h; sourceTree = "<group>"; };
+		6860DEEB2256D929007C062D /* KJProgressConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJProgressConfiguration.m; sourceTree = "<group>"; };
+		6860DEED225710A6007C062D /* KJProgressRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJProgressRight.h; sourceTree = "<group>"; };
+		6860DEEE225710A6007C062D /* KJProgressRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJProgressRight.m; sourceTree = "<group>"; };
 		686D10A7224A0F3F003F219C /* KJPlayImages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJPlayImages.h; sourceTree = "<group>"; };
 		686D10A8224A0F3F003F219C /* KJPlayImages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJPlayImages.m; sourceTree = "<group>"; };
 		689748412248C6C9000B42D8 /* KJLoadingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJLoadingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +161,27 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		6860DEE52256D839007C062D /* KJProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6860DEE62256D84A007C062D /* Animations */,
+				6860DEE72256D894007C062D /* KJProgressHUD.h */,
+				6860DEE82256D894007C062D /* KJProgressHUD.m */,
+				6860DEEA2256D929007C062D /* KJProgressConfiguration.h */,
+				6860DEEB2256D929007C062D /* KJProgressConfiguration.m */,
+			);
+			path = KJProgressHUD;
+			sourceTree = "<group>";
+		};
+		6860DEE62256D84A007C062D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				6860DEED225710A6007C062D /* KJProgressRight.h */,
+				6860DEEE225710A6007C062D /* KJProgressRight.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		689748382248C6C9000B42D8 = {
 			isa = PBXGroup;
 			children = (
@@ -168,11 +201,14 @@
 		689748432248C6C9000B42D8 /* KJLoadingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6860DEE52256D839007C062D /* KJProgressHUD */,
 				68218AF52249CD9E007A5422 /* KJLoadingAnimation */,
 				689748442248C6C9000B42D8 /* AppDelegate.h */,
 				689748452248C6C9000B42D8 /* AppDelegate.m */,
 				689748472248C6C9000B42D8 /* ViewController.h */,
 				689748482248C6C9000B42D8 /* ViewController.m */,
+				6860DEE22256D6A6007C062D /* HUDViewController.h */,
+				6860DEE32256D6A6007C062D /* HUDViewController.m */,
 				68B571672248DE7000C69A75 /* KJCustom.h */,
 				68B571682248DE7000C69A75 /* KJCustom.m */,
 				6897484A2248C6C9000B42D8 /* Main.storyboard */,
@@ -265,14 +301,18 @@
 				68B571692248DE7000C69A75 /* KJCustom.m in Sources */,
 				680EE7EE224DE25E003C1822 /* KJCircleStrokeSpin.m in Sources */,
 				68218B0A2249CD9E007A5422 /* KJLoadingAnimation.m in Sources */,
+				6860DEEC2256D929007C062D /* KJProgressConfiguration.m in Sources */,
 				68218B0B2249CD9E007A5422 /* KJTwoDots.m in Sources */,
 				68218B1C224A01A9007A5422 /* KJElectrocardiogram.m in Sources */,
+				6860DEE42256D6A6007C062D /* HUDViewController.m in Sources */,
 				686D10A9224A0F3F003F219C /* KJPlayImages.m in Sources */,
 				68218B0D2249CD9E007A5422 /* KJTurnedAround.m in Sources */,
 				68218B092249CD9E007A5422 /* KJLoadingConfiguration.m in Sources */,
 				68E367C9224DC2CC0072AC22 /* KJMalpositionRotate.m in Sources */,
+				6860DEEF225710A6007C062D /* KJProgressRight.m in Sources */,
 				68218B142249CDEB007A5422 /* KJWritingEffect.m in Sources */,
 				68218B0F2249CD9E007A5422 /* KJBallClipRotate.m in Sources */,
+				6860DEE92256D894007C062D /* KJProgressHUD.m in Sources */,
 				68218B192249F0A3007A5422 /* KJLoveHeart.m in Sources */,
 				68218B112249CD9E007A5422 /* KJEatDoug.m in Sources */,
 				68E367CC224DC8CD0072AC22 /* KJGradientSnake.m in Sources */,

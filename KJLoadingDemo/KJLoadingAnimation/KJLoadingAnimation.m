@@ -24,117 +24,116 @@
 #import "KJGradientSnake.h"
 #import "KJCircleStrokeSpin.h"
 
-@interface KJLoadingAnimation ()
+@interface KJLoadingAnimation ()<CAAnimationDelegate>
 @property(nonatomic,strong) KJLoadingConfiguration *kConfiguration;
-@property(nonatomic,strong) UIView *coverView;
-@property(nonatomic,strong) UIView *maskingView;
-@property(nonatomic,strong) UIView *animationView;
-@property(nonatomic,strong) UILabel *animationLabel;
-@property(nonatomic,strong) UIView *superView;
+@property(nonatomic,strong) UIView *coverView; /// 蒙版
+@property(nonatomic,strong) UIView *maskingView; /// 动画后面的背景框
+@property(nonatomic,strong) UIView *animationView; /// 动画图
+@property(nonatomic,strong) UILabel *animationLabel; /// 文字
+@property(nonatomic,strong) UIView *kSuperView; /// 保存父视图
 @end
 
 @implementation KJLoadingAnimation
-static KJLoadingAnimation *_LoadingAnimation = nil;
-
+static KJLoadingAnimation *_tools = nil;
+static CGFloat kAnimationWidth = 0.0;
+static CGFloat kAnimationHeight = 0.0;
 #pragma mark - 初始化方法
 + (instancetype)kLoadingAnimation{
     @synchronized (self) {
-        if (!_LoadingAnimation) {
-            _LoadingAnimation = [[KJLoadingAnimation alloc]init];
-        }
+        if (!_tools) _tools = [[KJLoadingAnimation alloc]init];
     }
-    return _LoadingAnimation;
+    return _tools;
 }
 
 + (KJLoadingAnimation*)initWithLoadingAnmationConfiguration:(KJLoadingConfiguration*__nullable)configuration{
     @synchronized (self) {
-        if (!_LoadingAnimation) {
-            _LoadingAnimation = [[KJLoadingAnimation alloc]init];
-        }
+        if (!_tools) _tools = [[KJLoadingAnimation alloc]init];
     }
-    _LoadingAnimation.kConfiguration = configuration == nil ? [KJLoadingConfiguration defaultLoadingConfiguration] : configuration;
-    return _LoadingAnimation;
+    _tools.kConfiguration = configuration == nil ? [KJLoadingConfiguration defaultLoadingConfiguration] : configuration;
+    return _tools;
 }
 
 /// 开始动画
-+ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration*__nullable)configuration{
-    KJLoadingAnimation *_tool = [self initWithLoadingAnmationConfiguration:configuration];
-    [self kSetupWithTool:_tool View:view];
++ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration *__nullable)configuration{
+    KJLoadingAnimation *xx = [self initWithLoadingAnmationConfiguration:configuration];
+    [self kSetupWithTool:xx View:view];
 }
 /// 开始动画  __nullable 可以为空
-- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration*__nullable)configuration{
+- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingConfiguration *__nullable)configuration{
     self.kConfiguration = configuration == nil ? [KJLoadingConfiguration defaultLoadingConfiguration] : configuration;
     [KJLoadingAnimation kSetupWithTool:self View:view];
 }
 /// 停止
 + (void)kLoadingAnimationStopAnimating{
-    if (_LoadingAnimation.kConfiguration.kDismiss) {
-        /// block代码块动画
-        [UIView animateWithDuration:_LoadingAnimation.kConfiguration.kDismissTime animations:^{
-            //执行的动画
-            _LoadingAnimation.coverView.frame = CGRectMake(0, 0, 10, 10);
-            _LoadingAnimation.coverView.center = CGPointMake(_LoadingAnimation.superView.frame.size.width/2, _LoadingAnimation.superView.frame.size.height/2);
-            CGFloat kw = _LoadingAnimation.kConfiguration.kSize.width / [UIScreen mainScreen].bounds.size.width * 10.;
-            _LoadingAnimation.maskingView.frame = CGRectMake(0, 0, kw, kw);
-            _LoadingAnimation.maskingView.center = CGPointMake(_LoadingAnimation.maskingView.frame.size.width, _LoadingAnimation.maskingView.frame.size.height);
-        } completion:^(BOOL finished) {
-            //动画执行完毕后的首位操作
-            [KJLoadingAnimation kRemove];
-        }];
+    if (_tools.kConfiguration.kDismiss) {
+        [_tools kDissmissAnimation];
         return;
     }
-    
-    [KJLoadingAnimation kRemove];
+    [_tools kRemove];
 }
 /// 停止
 - (void)kLoadingAnimationStopAnimating{
     [KJLoadingAnimation kLoadingAnimationStopAnimating];
 }
 
+/// 消失动画
+- (void)kDissmissAnimation{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.delegate = self;
+    animation.values = @[@(0.9),@(0.8),@(0.7),@(0.6),@(0.5),@(0.4),@(0.3),@(0.2),@(0.1),@(0.0)];
+    animation.duration = self.kConfiguration.kDismissTime;
+    animation.autoreverses = NO;
+    animation.repeatCount = 1;
+    animation.removedOnCompletion = YES;
+    animation.fillMode = kCAFillModeForwards;
+    [self.coverView.layer addAnimation:animation forKey:@"zoom"];
+    [self.maskingView.layer addAnimation:animation forKey:@"zoom"];
+}
+#pragma mark - CAAnimationDelegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [self kRemove];
+}
+
 #pragma mark - 内部方法
+- (void)kRemove{
+    _maskingView.hidden = _coverView.hidden = YES;
+    _animationView.layer.speed = 0.0f;
+    _animationView.layer.sublayers = nil;
+    [_maskingView removeFromSuperview];
+    [_coverView removeFromSuperview];
+    _maskingView = _coverView = nil;
+}
 /// 布局subview
 + (void)kSetupWithTool:(KJLoadingAnimation*)animationTool View:(UIView*)superview{
     /// 保存父视图
-    animationTool.superView = superview;
+    animationTool.kSuperView = superview;
     /// 先移出之前的
-    [self kRemove];
+    [_tools kRemove];
     
-    CGFloat w = animationTool.kConfiguration.kSize.width;
-    CGFloat h = animationTool.kConfiguration.kSize.height;
+    kAnimationWidth = animationTool.kConfiguration.kSize.width;
+    kAnimationHeight = animationTool.kConfiguration.kSize.height;
     
-    NSDictionary *attribute = @{NSFontAttributeName : animationTool.kConfiguration.kDisplayTitleFont};
-    CGFloat xx = [animationTool.kConfiguration.kDisplayString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width + 20;
-    
-    w = w >= xx ? w : xx;
-    
-    animationTool.coverView.frame = superview.bounds;
-    animationTool.coverView.backgroundColor = animationTool.kConfiguration.kCoverBackgroundColor;
-    [superview addSubview:animationTool.coverView];
-    
-    animationTool.maskingView.backgroundColor = animationTool.kConfiguration.kMaskingBackgroundColor;
-    animationTool.maskingView.frame = CGRectMake(0, 0, w, h);
-    animationTool.maskingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    animationTool.maskingView.center = animationTool.coverView.center;
-    animationTool.maskingView.layer.masksToBounds = YES;
-    animationTool.maskingView.layer.cornerRadius = animationTool.kConfiguration.kMaskingCircular;
-    [animationTool.coverView addSubview:animationTool.maskingView];
-    
-    /// 没有文字显示的状态
-    if ([animationTool.kConfiguration.kDisplayString isEqualToString:@""] || animationTool.kConfiguration.kDisplayString == nil) {
-        animationTool.animationView.frame = CGRectMake(0, 0, animationTool.kConfiguration.kSize.width/2, h/2);
-        animationTool.animationView.center = CGPointMake(w/2, h/2);
-    }else{
-        animationTool.animationView.frame = CGRectMake(0, 0, animationTool.kConfiguration.kSize.width/2, animationTool.kConfiguration.kSize.width/2);
-        animationTool.animationView.center = CGPointMake(w/2, animationTool.kConfiguration.kSize.width/2);
-        CGFloat xh = animationTool.kConfiguration.kSize.width / 3;
-        animationTool.animationLabel.frame = CGRectMake(0, h - xh, w, xh);
-        animationTool.animationLabel.text = animationTool.kConfiguration.kDisplayString;
-        animationTool.animationLabel.textColor = animationTool.kConfiguration.kTitleColor;
-        animationTool.animationLabel.font = animationTool.kConfiguration.kDisplayTitleFont;
-        [animationTool.maskingView addSubview:animationTool.animationLabel];
+    /// 有文字的情况
+    if (![animationTool.kConfiguration.kDisplayString isEqualToString:@""] && animationTool.kConfiguration.kDisplayString != nil) {
+        NSDictionary *attribute = @{NSFontAttributeName : animationTool.kConfiguration.kDisplayTitleFont};
+        CGFloat xx = [animationTool.kConfiguration.kDisplayString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width + 20;
+        kAnimationWidth = kAnimationWidth >= xx ? kAnimationWidth : xx;
     }
     
     [animationTool.maskingView addSubview:animationTool.animationView];
+    [animationTool.coverView addSubview:animationTool.maskingView];
+    [superview addSubview:animationTool.coverView];
+    
+    /// 没有文字显示的状态
+    if ([animationTool.kConfiguration.kDisplayString isEqualToString:@""] || animationTool.kConfiguration.kDisplayString == nil) {
+        CGFloat xw = kAnimationWidth >= kAnimationHeight ? kAnimationHeight/2 : kAnimationWidth/2;
+        animationTool.animationView.frame = CGRectMake(0, 0, xw, xw);
+        animationTool.animationView.center = CGPointMake(kAnimationWidth/2, kAnimationHeight/2);
+    }else{
+        animationTool.animationView.frame = CGRectMake(0, 0, animationTool.kConfiguration.kSize.width/2, animationTool.kConfiguration.kSize.width/2);
+        animationTool.animationView.center = CGPointMake(kAnimationWidth/2, animationTool.kConfiguration.kSize.width/2);
+        [animationTool.maskingView addSubview:animationTool.animationLabel];
+    }
     
     KJLoadingConfiguration *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.kConfiguration.kType ClassName:animationTool.kConfiguration.class_name];
     if (animationTool.kConfiguration.kType == KJLoadingAnimationTypeWritingEffect) {
@@ -150,6 +149,8 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
     }
     animationTool.animationView.layer.speed = animationTool.kConfiguration.kSpeed;
     [anmation setupAnimationInLayer:animationTool.animationView.layer withSize:animationTool.animationView.frame.size tintColor:animationTool.kConfiguration.kAnmationColor];
+    
+    _tools.maskingView.hidden = _tools.coverView.hidden = NO;
 }
 
 /// 获取对应的动画素材类
@@ -172,13 +173,6 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
         case KJLoadingAnimationTypeGradientSnake: return [KJGradientSnake new];
         case KJLoadingAnimationTypeCircleStrokeSpin: return [KJCircleStrokeSpin new];
     }
-}
-
-+ (void)kRemove{
-    _LoadingAnimation.animationView.layer.speed = 0.0f;
-    _LoadingAnimation.animationView.layer.sublayers = nil;
-    [_LoadingAnimation.maskingView removeFromSuperview];
-    [_LoadingAnimation.coverView removeFromSuperview];
 }
 
 /// 获取某个文件夹下面图片张数
@@ -212,12 +206,20 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
 - (UIView*)coverView{
     if (!_coverView) {
         _coverView = [UIView new];
+        _coverView.frame = self.kSuperView.bounds;
+        _coverView.backgroundColor = self.kConfiguration.kCoverBackgroundColor;
     }
     return _coverView;
 }
 - (UIView*)maskingView{
     if (!_maskingView) {
         _maskingView = [UIView new];
+        _maskingView.frame = CGRectMake(0, 0, kAnimationWidth, kAnimationHeight);
+        _maskingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _maskingView.backgroundColor = self.kConfiguration.kMaskingBackgroundColor;
+        _maskingView.center = self.coverView.center;
+        _maskingView.layer.masksToBounds = YES;
+        _maskingView.layer.cornerRadius = self.kConfiguration.kMaskingCircular;
     }
     return _maskingView;
 }
@@ -231,6 +233,11 @@ static KJLoadingAnimation *_LoadingAnimation = nil;
     if (!_animationLabel) {
         _animationLabel = [[UILabel alloc] init];
         _animationLabel.textAlignment = NSTextAlignmentCenter;
+        CGFloat xh = self.kConfiguration.kSize.width / 3;
+        _animationLabel.frame = CGRectMake(0, kAnimationHeight - xh, kAnimationWidth, xh);
+        _animationLabel.text = self.kConfiguration.kDisplayString;
+        _animationLabel.textColor = self.kConfiguration.kTitleColor;
+        _animationLabel.font = self.kConfiguration.kDisplayTitleFont;
     }
     return _animationLabel;
 }

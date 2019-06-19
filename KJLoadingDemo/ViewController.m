@@ -22,11 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSMutableArray *arr = [NSMutableArray array];
-    for (NSInteger i = 1; i <= 24 ; i++) {
-        NSString *name = [NSString stringWithFormat:@"as_10%.2ld",i];
-        [arr addObject:[UIImage imageNamed:name]];
-    }
+//    NSMutableArray *arr = [NSMutableArray array];
+//    for (NSInteger i = 1; i <= 40 ; i++) {
+//        NSString *name = [NSString stringWithFormat:@"KJLoadingAnimation.bundle/loading_10%.2ld",i];
+//        [arr addObject:[UIImage imageNamed:name]];
+//    }
     
     KJLoadingAnimation *tool = [[KJLoadingAnimation alloc]init];
     KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
@@ -35,7 +35,9 @@
     loadingConfig.kType = KJLoadingAnimationTypeCircleStrokeSpin;
 //    loadingConfig.kImages = arr;
     [tool kLoadingAnimationStartAnimatingWithView:self.view1 Configuration:loadingConfig];
-    
+}
+
+- (void)setNeedsFocusUpdate{
     [self xxx];
 }
 
@@ -43,7 +45,7 @@
     KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
     loadingConfig.kDisplayString = @"";
     loadingConfig.kOpenRandomType = YES;
-    loadingConfig.kSize = CGSizeMake(100, 100);
+    loadingConfig.kSize = CGSizeMake(120, 100);
     loadingConfig.kDismiss = YES;
     [[KJLoadingAnimation kLoadingAnimation] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
 }
