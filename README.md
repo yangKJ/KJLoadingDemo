@@ -1,6 +1,5 @@
 # KJLoadingDemo
-
-![coverImage](https://raw.githubusercontent.com/yangKJ/CommonDatas/master/CommonDatas/Res/coverImage.jpg)
+![coverImage](https://upload-images.jianshu.io/upload_images/1933747-b7e843a01999b9a9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这个工程提供了一些iOS开发中用到的加载控件    
 基于CALayer封装加载等待动画 - 加载等待工具    
@@ -91,8 +90,6 @@ KJLoadingAnimation 内含 7 种加载动画，多种属性自定义调整
 * 如果在使用过程中遇到Bug，希望你能Issues，我会及时修复
 * 大家有什么需要添加的功能，也可以给我留言，有空我将补充完善
 * 谢谢大家的支持 - -！
-
-[![LOGO](https://github.com/yangKJ/KJPlayerDemo/blob/master/KJPlayerDemo/Demo/Assets.xcassets/AppIcon.appiconset/WechatIMG57486iPhoneSpootlight7_40pt@3x.png?raw=true)](https://www.jianshu.com/u/c84c00476ab6)
 
 [![谢谢老板](https://upload-images.jianshu.io/upload_images/1933747-879572df848f758a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)](https://github.com/yangKJ/KJPlayerDemo)
 
