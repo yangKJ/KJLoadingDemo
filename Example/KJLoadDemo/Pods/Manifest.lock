@@ -1,0 +1,18 @@
+PODS:
+  - KJLoadingAnimation (1.2.0):
+    - KJLoadingAnimation/KJLoadingAnimation (= 1.2.0)
+  - KJLoadingAnimation/KJLoadingAnimation (1.2.0)
+
+DEPENDENCIES:
+  - KJLoadingAnimation
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KJLoadingAnimation
+
+SPEC CHECKSUMS:
+  KJLoadingAnimation: dfb232af398af10fe494960e4a562e686a4c9fbf
+
+PODFILE CHECKSUM: b7e72e00d3f1b7920a4a95f76e143f1701291756
+
+COCOAPODS: 1.6.1

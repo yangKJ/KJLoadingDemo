@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2D18220FE307406B01D8C4D1CF459D /* KJOutwardWaves.h in Headers */ = {isa = PBXBuildFile; fileRef = 149641DA1764DA3290DC81CB347FD921 /* KJOutwardWaves.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A9279F99AC70BC18E850307FA835BF6 /* KJWritingEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FC499B61412AA840C64D9B4776CE2E15 /* KJWritingEffect.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1B5BF3520486920446F077807D352E10 /* KJPlayImages.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E4C9C6EC7E6B1AA50178CBAFECA4B6 /* KJPlayImages.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2850B6581C4355DD9F5AB77E7B948590 /* KJOutwardWaves.m in Sources */ = {isa = PBXBuildFile; fileRef = D522DB8D5CD38E137ECF4305B23F4A9E /* KJOutwardWaves.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2FBDCB325E992E4D81F7CF0BF7504AD6 /* KJMalpositionRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 018E002A1CD7EB9CF52562AFAE4AA460 /* KJMalpositionRotate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		495934FD74AB88FE639E52D243AD01F9 /* KJHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = A872F0D61A0B3350457CD0F737484A19 /* KJHourGlass.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4AC35CB0A2FC0FAC9F719F4E2F396DC5 /* KJLoadingAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A2A754471D156E32FB3BE0D3B8FE9B /* KJLoadingAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		592EADC4E34B057E4EF92BB9E8F3FEAC /* KJLineScalePulseOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 767DD754AC621070191B5DA15033BA71 /* KJLineScalePulseOut.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5ACF16F30C5E5F9E29084BE94A61FA4F /* KJLoveHeart.m in Sources */ = {isa = PBXBuildFile; fileRef = 746F5171D4F36B90EE49564EA2EC1264 /* KJLoveHeart.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5F9CD57F1BF9073510375CDB6D3B3C24 /* KJLoadingAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8C57FCF63FB78DFADD6EC62D8B57D0 /* KJLoadingAnimation-dummy.m */; };
+		66D49D2A52E895337C87D4915D703B89 /* KJPlayImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B608557B69065C39DE1B11BDB8686B8 /* KJPlayImages.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		67729D8D9469A28CA39ACE6F81F133B2 /* KJGradientSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 762AD7E1ADA322845DD1E97085B5C927 /* KJGradientSnake.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		796BF5F5E937C40431EAB016E0EBD26C /* KJLineScalePulseOut.h in Headers */ = {isa = PBXBuildFile; fileRef = 51FD2F376BD256F8271B671740AD75E8 /* KJLineScalePulseOut.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7DDD1E754F1E87AE2FBA003AB6D77490 /* KJLoadingConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CD371E860481837A25CCFF1FF550464 /* KJLoadingConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FE34B9D5A495DD6791573BBF091D6DC /* KJBallClipRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E6275497F9B0015F0F391CCB907F9 /* KJBallClipRotate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		88E02CF7E8419AC6A18CD657152E4FB0 /* KJCircleStrokeSpin.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB771B8E6E44440603C9A97EFCE4A25 /* KJCircleStrokeSpin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		891930055528226B69C2260124960F7D /* KJGradientSnake.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8022920521931EDA975172772A4A34 /* KJGradientSnake.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A376C7FEA075D497A7CDFEB4A268967 /* KJBallClipRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = C9E4AFF9AA82FBCEDD59042D465B313F /* KJBallClipRotate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6F4666D1CFB2FF4C84ABF950F3F8D50 /* KJEatDoug.m in Sources */ = {isa = PBXBuildFile; fileRef = 5765337167863EFA1A151BEF2A2C8BEA /* KJEatDoug.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AA1C81F74E71533CEA54B436F796A25E /* KJTurnedAround.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B99EEE6302B392D742A9E3C7C81CFDA /* KJTurnedAround.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA523328A02220E01E8A0D21615E5B86 /* KJElectrocardiogram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8AAC4420D140BA44E6FD4E14EEFED4 /* KJElectrocardiogram.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AADE77018C8A6DD77441E711563906A1 /* KJTwoDots.h in Headers */ = {isa = PBXBuildFile; fileRef = FD44ADC417496E4EBC9C2B3DD04D3F94 /* KJTwoDots.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B0A79B7ED3A3EEFD2BC3ACE21A6C980C /* KJWritingEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = B85A90C1C05652B0CDD8D73BABA76854 /* KJWritingEffect.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B2699EA52C0CDC49E5A8BB2D8A8F11F2 /* Pods-KJLoadDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5721B58E1BEAFAB9A52864E9725FC034 /* Pods-KJLoadDemo-dummy.m */; };
+		B68420865B2595CD36625D894604FBBC /* KJElectrocardiogram.h in Headers */ = {isa = PBXBuildFile; fileRef = B5296DD6FAA13576B405E7C072F515D3 /* KJElectrocardiogram.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C1E835F2261343B8F62206C82CC02B7B /* KJTurnedAround.m in Sources */ = {isa = PBXBuildFile; fileRef = 4649ECDDD827CC0A43AD429DE95B63B7 /* KJTurnedAround.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C3892CC45B127EF5A1DB49F5EE14C255 /* KJHourGlass.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D99DB548C14FF6767A6BCF1064C556 /* KJHourGlass.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C962239CE801BDDD94CBA4CF7E591DAE /* KJLoadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFD4E1FC98D4420892C0E9F7EDD9F1 /* KJLoadingAnimation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D01685160BFE8B8F89DE01721A98DEDD /* KJLoveHeart.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF0612E0455105D7012FBBE60F322F4 /* KJLoveHeart.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D63C8853C3D56E9EBD44F514A5472A15 /* KJThreeDots.h in Headers */ = {isa = PBXBuildFile; fileRef = DAD0BD5AC1605EC5AEAF8F4563C42B44 /* KJThreeDots.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D83F77DC3C76507F9BD1B849C6B9ABA0 /* KJLoadingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DB39715AD32464BC7B7BFF835EFAEDCB /* KJLoadingConfiguration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DCBA405542FB8B8CC95A6C46130C41C2 /* KJMalpositionRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821573E7ACFBE67878701101AFD52D4 /* KJMalpositionRotate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DEECEFC53D705879C6242C9CF015577B /* KJCircleStrokeSpin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0225964FBB3B4B7CF84C7AE06A54C71D /* KJCircleStrokeSpin.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E4B16F313B2ECC5B862603954E833158 /* KJThreeDots.m in Sources */ = {isa = PBXBuildFile; fileRef = D5223F9BC04E65C4FF2A1D5BB4FB6EEB /* KJThreeDots.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E794EC2DDFFB306CA5D9AED9B501BACD /* KJTwoDots.m in Sources */ = {isa = PBXBuildFile; fileRef = F028FF5A29E07A7E9E94AB6662C55A74 /* KJTwoDots.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FEC23F70D91F4E2715B3AF6800D2E306 /* KJEatDoug.h in Headers */ = {isa = PBXBuildFile; fileRef = 97F8C52877387CBB522FBA37E000BEE4 /* KJEatDoug.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C8D71C37CFD66DBD7B989302F737369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 426A14FAD950B42F5F5F4661AB6C8B63;
+			remoteInfo = KJLoadingAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		018E002A1CD7EB9CF52562AFAE4AA460 /* KJMalpositionRotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJMalpositionRotate.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJMalpositionRotate.h; sourceTree = "<group>"; };
+		0225964FBB3B4B7CF84C7AE06A54C71D /* KJCircleStrokeSpin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJCircleStrokeSpin.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJCircleStrokeSpin.m; sourceTree = "<group>"; };
+		108C2C385C6E26165A6A4957F2E39C5F /* Pods-KJLoadDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJLoadDemo-resources.sh"; sourceTree = "<group>"; };
+		128F8987186117923BBB3D4CD538EFA3 /* Pods-KJLoadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJLoadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		149641DA1764DA3290DC81CB347FD921 /* KJOutwardWaves.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJOutwardWaves.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJOutwardWaves.h; sourceTree = "<group>"; };
+		2147997DD5BDF00549796C980F76B9F0 /* Pods-KJLoadDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJLoadDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		270E6275497F9B0015F0F391CCB907F9 /* KJBallClipRotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJBallClipRotate.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJBallClipRotate.m; sourceTree = "<group>"; };
+		2CB771B8E6E44440603C9A97EFCE4A25 /* KJCircleStrokeSpin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJCircleStrokeSpin.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJCircleStrokeSpin.h; sourceTree = "<group>"; };
+		2E2DFAA931E8208BBA17647E8D0896BE /* Pods-KJLoadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJLoadDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2EF0612E0455105D7012FBBE60F322F4 /* KJLoveHeart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJLoveHeart.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJLoveHeart.h; sourceTree = "<group>"; };
+		3B99EEE6302B392D742A9E3C7C81CFDA /* KJTurnedAround.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJTurnedAround.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJTurnedAround.h; sourceTree = "<group>"; };
+		3C8AAC4420D140BA44E6FD4E14EEFED4 /* KJElectrocardiogram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJElectrocardiogram.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJElectrocardiogram.m; sourceTree = "<group>"; };
+		4413014F594B712B26EC9CAB54722AC4 /* libPods-KJLoadDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KJLoadDemo.a"; path = "libPods-KJLoadDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4649ECDDD827CC0A43AD429DE95B63B7 /* KJTurnedAround.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJTurnedAround.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJTurnedAround.m; sourceTree = "<group>"; };
+		4B608557B69065C39DE1B11BDB8686B8 /* KJPlayImages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJPlayImages.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJPlayImages.m; sourceTree = "<group>"; };
+		501A41ECB43F3E38FED344015A090E8D /* KJLoadingAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KJLoadingAnimation.xcconfig; sourceTree = "<group>"; };
+		51FD2F376BD256F8271B671740AD75E8 /* KJLineScalePulseOut.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJLineScalePulseOut.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJLineScalePulseOut.h; sourceTree = "<group>"; };
+		5721B58E1BEAFAB9A52864E9725FC034 /* Pods-KJLoadDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KJLoadDemo-dummy.m"; sourceTree = "<group>"; };
+		5765337167863EFA1A151BEF2A2C8BEA /* KJEatDoug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJEatDoug.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJEatDoug.m; sourceTree = "<group>"; };
+		5EBA0B59BCF1274074F920297149856D /* libKJLoadingAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKJLoadingAnimation.a; path = libKJLoadingAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		746F5171D4F36B90EE49564EA2EC1264 /* KJLoveHeart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJLoveHeart.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJLoveHeart.m; sourceTree = "<group>"; };
+		762AD7E1ADA322845DD1E97085B5C927 /* KJGradientSnake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJGradientSnake.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJGradientSnake.m; sourceTree = "<group>"; };
+		767DD754AC621070191B5DA15033BA71 /* KJLineScalePulseOut.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJLineScalePulseOut.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJLineScalePulseOut.m; sourceTree = "<group>"; };
+		7BBFD4E1FC98D4420892C0E9F7EDD9F1 /* KJLoadingAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJLoadingAnimation.m; path = KJLoadingDemo/KJLoadingAnimation/KJLoadingAnimation.m; sourceTree = "<group>"; };
+		8821573E7ACFBE67878701101AFD52D4 /* KJMalpositionRotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJMalpositionRotate.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJMalpositionRotate.m; sourceTree = "<group>"; };
+		8CD371E860481837A25CCFF1FF550464 /* KJLoadingConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJLoadingConfiguration.h; path = KJLoadingDemo/KJLoadingAnimation/KJLoadingConfiguration.h; sourceTree = "<group>"; };
+		95D99DB548C14FF6767A6BCF1064C556 /* KJHourGlass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJHourGlass.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJHourGlass.h; sourceTree = "<group>"; };
+		97F8C52877387CBB522FBA37E000BEE4 /* KJEatDoug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJEatDoug.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJEatDoug.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5E74F958CC469075C3F510072C47066 /* KJLoadingAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJLoadingAnimation-prefix.pch"; sourceTree = "<group>"; };
+		A872F0D61A0B3350457CD0F737484A19 /* KJHourGlass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJHourGlass.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJHourGlass.m; sourceTree = "<group>"; };
+		AC8022920521931EDA975172772A4A34 /* KJGradientSnake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJGradientSnake.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJGradientSnake.h; sourceTree = "<group>"; };
+		B0A2A754471D156E32FB3BE0D3B8FE9B /* KJLoadingAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJLoadingAnimation.h; path = KJLoadingDemo/KJLoadingAnimation/KJLoadingAnimation.h; sourceTree = "<group>"; };
+		B5296DD6FAA13576B405E7C072F515D3 /* KJElectrocardiogram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJElectrocardiogram.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJElectrocardiogram.h; sourceTree = "<group>"; };
+		B85A90C1C05652B0CDD8D73BABA76854 /* KJWritingEffect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJWritingEffect.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJWritingEffect.h; sourceTree = "<group>"; };
+		C6E4C9C6EC7E6B1AA50178CBAFECA4B6 /* KJPlayImages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJPlayImages.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJPlayImages.h; sourceTree = "<group>"; };
+		C9E4AFF9AA82FBCEDD59042D465B313F /* KJBallClipRotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJBallClipRotate.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJBallClipRotate.h; sourceTree = "<group>"; };
+		D3202B18E4A81E210AD256F9174504A1 /* Pods-KJLoadDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJLoadDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D5223F9BC04E65C4FF2A1D5BB4FB6EEB /* KJThreeDots.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJThreeDots.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJThreeDots.m; sourceTree = "<group>"; };
+		D522DB8D5CD38E137ECF4305B23F4A9E /* KJOutwardWaves.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJOutwardWaves.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJOutwardWaves.m; sourceTree = "<group>"; };
+		DAD0BD5AC1605EC5AEAF8F4563C42B44 /* KJThreeDots.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJThreeDots.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJThreeDots.h; sourceTree = "<group>"; };
+		DB39715AD32464BC7B7BFF835EFAEDCB /* KJLoadingConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJLoadingConfiguration.m; path = KJLoadingDemo/KJLoadingAnimation/KJLoadingConfiguration.m; sourceTree = "<group>"; };
+		EBB54D50F6B9E9638928771D72A57FD4 /* KJLoadingAnimation.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = KJLoadingAnimation.bundle; path = KJLoadingDemo/KJLoadingAnimation/KJLoadingAnimation.bundle; sourceTree = "<group>"; };
+		EE8C57FCF63FB78DFADD6EC62D8B57D0 /* KJLoadingAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KJLoadingAnimation-dummy.m"; sourceTree = "<group>"; };
+		F028FF5A29E07A7E9E94AB6662C55A74 /* KJTwoDots.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJTwoDots.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJTwoDots.m; sourceTree = "<group>"; };
+		FC499B61412AA840C64D9B4776CE2E15 /* KJWritingEffect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KJWritingEffect.m; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJWritingEffect.m; sourceTree = "<group>"; };
+		FD44ADC417496E4EBC9C2B3DD04D3F94 /* KJTwoDots.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KJTwoDots.h; path = KJLoadingDemo/KJLoadingAnimation/Animations/KJTwoDots.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		378FB1D50F3656CF963650D32235FCCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A5E7E33FB319130AFF204E38C8FF97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A54204ED153E2C5EA406A0B482394F4 /* KJLoadingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				7CF79C3730D104231EDE0C59B93463AD /* KJLoadingAnimation */,
+				70CA91EFA8683149CA3DF999131766C4 /* Support Files */,
+			);
+			name = KJLoadingAnimation;
+			path = KJLoadingAnimation;
+			sourceTree = "<group>";
+		};
+		60CC264BA965FD71CA0A6E58837021F9 /* Pods-KJLoadDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2147997DD5BDF00549796C980F76B9F0 /* Pods-KJLoadDemo-acknowledgements.markdown */,
+				D3202B18E4A81E210AD256F9174504A1 /* Pods-KJLoadDemo-acknowledgements.plist */,
+				5721B58E1BEAFAB9A52864E9725FC034 /* Pods-KJLoadDemo-dummy.m */,
+				108C2C385C6E26165A6A4957F2E39C5F /* Pods-KJLoadDemo-resources.sh */,
+				128F8987186117923BBB3D4CD538EFA3 /* Pods-KJLoadDemo.debug.xcconfig */,
+				2E2DFAA931E8208BBA17647E8D0896BE /* Pods-KJLoadDemo.release.xcconfig */,
+			);
+			name = "Pods-KJLoadDemo";
+			path = "Target Support Files/Pods-KJLoadDemo";
+			sourceTree = "<group>";
+		};
+		69C9882FB0A7DABDD75F3374D2BB6245 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60CC264BA965FD71CA0A6E58837021F9 /* Pods-KJLoadDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		70CA91EFA8683149CA3DF999131766C4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				501A41ECB43F3E38FED344015A090E8D /* KJLoadingAnimation.xcconfig */,
+				EE8C57FCF63FB78DFADD6EC62D8B57D0 /* KJLoadingAnimation-dummy.m */,
+				A5E74F958CC469075C3F510072C47066 /* KJLoadingAnimation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KJLoadingAnimation";
+			sourceTree = "<group>";
+		};
+		7CF79C3730D104231EDE0C59B93463AD /* KJLoadingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C9E4AFF9AA82FBCEDD59042D465B313F /* KJBallClipRotate.h */,
+				270E6275497F9B0015F0F391CCB907F9 /* KJBallClipRotate.m */,
+				2CB771B8E6E44440603C9A97EFCE4A25 /* KJCircleStrokeSpin.h */,
+				0225964FBB3B4B7CF84C7AE06A54C71D /* KJCircleStrokeSpin.m */,
+				97F8C52877387CBB522FBA37E000BEE4 /* KJEatDoug.h */,
+				5765337167863EFA1A151BEF2A2C8BEA /* KJEatDoug.m */,
+				B5296DD6FAA13576B405E7C072F515D3 /* KJElectrocardiogram.h */,
+				3C8AAC4420D140BA44E6FD4E14EEFED4 /* KJElectrocardiogram.m */,
+				AC8022920521931EDA975172772A4A34 /* KJGradientSnake.h */,
+				762AD7E1ADA322845DD1E97085B5C927 /* KJGradientSnake.m */,
+				95D99DB548C14FF6767A6BCF1064C556 /* KJHourGlass.h */,
+				A872F0D61A0B3350457CD0F737484A19 /* KJHourGlass.m */,
+				51FD2F376BD256F8271B671740AD75E8 /* KJLineScalePulseOut.h */,
+				767DD754AC621070191B5DA15033BA71 /* KJLineScalePulseOut.m */,
+				B0A2A754471D156E32FB3BE0D3B8FE9B /* KJLoadingAnimation.h */,
+				7BBFD4E1FC98D4420892C0E9F7EDD9F1 /* KJLoadingAnimation.m */,
+				8CD371E860481837A25CCFF1FF550464 /* KJLoadingConfiguration.h */,
+				DB39715AD32464BC7B7BFF835EFAEDCB /* KJLoadingConfiguration.m */,
+				2EF0612E0455105D7012FBBE60F322F4 /* KJLoveHeart.h */,
+				746F5171D4F36B90EE49564EA2EC1264 /* KJLoveHeart.m */,
+				018E002A1CD7EB9CF52562AFAE4AA460 /* KJMalpositionRotate.h */,
+				8821573E7ACFBE67878701101AFD52D4 /* KJMalpositionRotate.m */,
+				149641DA1764DA3290DC81CB347FD921 /* KJOutwardWaves.h */,
+				D522DB8D5CD38E137ECF4305B23F4A9E /* KJOutwardWaves.m */,
+				C6E4C9C6EC7E6B1AA50178CBAFECA4B6 /* KJPlayImages.h */,
+				4B608557B69065C39DE1B11BDB8686B8 /* KJPlayImages.m */,
+				DAD0BD5AC1605EC5AEAF8F4563C42B44 /* KJThreeDots.h */,
+				D5223F9BC04E65C4FF2A1D5BB4FB6EEB /* KJThreeDots.m */,
+				3B99EEE6302B392D742A9E3C7C81CFDA /* KJTurnedAround.h */,
+				4649ECDDD827CC0A43AD429DE95B63B7 /* KJTurnedAround.m */,
+				FD44ADC417496E4EBC9C2B3DD04D3F94 /* KJTwoDots.h */,
+				F028FF5A29E07A7E9E94AB6662C55A74 /* KJTwoDots.m */,
+				B85A90C1C05652B0CDD8D73BABA76854 /* KJWritingEffect.h */,
+				FC499B61412AA840C64D9B4776CE2E15 /* KJWritingEffect.m */,
+				B921BC0DB1903A021E8B99521F11224C /* Resources */,
+			);
+			name = KJLoadingAnimation;
+			sourceTree = "<group>";
+		};
+		B921BC0DB1903A021E8B99521F11224C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBB54D50F6B9E9638928771D72A57FD4 /* KJLoadingAnimation.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BE8C70D23A792F23C1263DC88D1AE3F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EBA0B59BCF1274074F920297149856D /* libKJLoadingAnimation.a */,
+				4413014F594B712B26EC9CAB54722AC4 /* libPods-KJLoadDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				E40838F8A97B49541733C41A5259771E /* Pods */,
+				BE8C70D23A792F23C1263DC88D1AE3F2 /* Products */,
+				69C9882FB0A7DABDD75F3374D2BB6245 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E40838F8A97B49541733C41A5259771E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A54204ED153E2C5EA406A0B482394F4 /* KJLoadingAnimation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5B1ECD5388DF54A08ADF03639FA75C29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A376C7FEA075D497A7CDFEB4A268967 /* KJBallClipRotate.h in Headers */,
+				88E02CF7E8419AC6A18CD657152E4FB0 /* KJCircleStrokeSpin.h in Headers */,
+				FEC23F70D91F4E2715B3AF6800D2E306 /* KJEatDoug.h in Headers */,
+				B68420865B2595CD36625D894604FBBC /* KJElectrocardiogram.h in Headers */,
+				891930055528226B69C2260124960F7D /* KJGradientSnake.h in Headers */,
+				C3892CC45B127EF5A1DB49F5EE14C255 /* KJHourGlass.h in Headers */,
+				796BF5F5E937C40431EAB016E0EBD26C /* KJLineScalePulseOut.h in Headers */,
+				4AC35CB0A2FC0FAC9F719F4E2F396DC5 /* KJLoadingAnimation.h in Headers */,
+				7DDD1E754F1E87AE2FBA003AB6D77490 /* KJLoadingConfiguration.h in Headers */,
+				D01685160BFE8B8F89DE01721A98DEDD /* KJLoveHeart.h in Headers */,
+				2FBDCB325E992E4D81F7CF0BF7504AD6 /* KJMalpositionRotate.h in Headers */,
+				0A2D18220FE307406B01D8C4D1CF459D /* KJOutwardWaves.h in Headers */,
+				1B5BF3520486920446F077807D352E10 /* KJPlayImages.h in Headers */,
+				D63C8853C3D56E9EBD44F514A5472A15 /* KJThreeDots.h in Headers */,
+				AA1C81F74E71533CEA54B436F796A25E /* KJTurnedAround.h in Headers */,
+				AADE77018C8A6DD77441E711563906A1 /* KJTwoDots.h in Headers */,
+				B0A79B7ED3A3EEFD2BC3ACE21A6C980C /* KJWritingEffect.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D92D3107F7A5855C6F02EFC0549DE87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		426A14FAD950B42F5F5F4661AB6C8B63 /* KJLoadingAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D0EA26F9509B288A1D7A851A12870F5 /* Build configuration list for PBXNativeTarget "KJLoadingAnimation" */;
+			buildPhases = (
+				5B1ECD5388DF54A08ADF03639FA75C29 /* Headers */,
+				D02EF2F22E745114D49FA84BFE4A2805 /* Sources */,
+				54A5E7E33FB319130AFF204E38C8FF97 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KJLoadingAnimation;
+			productName = KJLoadingAnimation;
+			productReference = 5EBA0B59BCF1274074F920297149856D /* libKJLoadingAnimation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7751FBB28614D28B556A19AEFE44E7AA /* Pods-KJLoadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC4D1A38F6277F44C26D1E03A3863C5 /* Build configuration list for PBXNativeTarget "Pods-KJLoadDemo" */;
+			buildPhases = (
+				5D92D3107F7A5855C6F02EFC0549DE87 /* Headers */,
+				F185302A31F4B11995972829CF0B089A /* Sources */,
+				378FB1D50F3656CF963650D32235FCCA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26E83868268BC42CD80F125BEBF44EAA /* PBXTargetDependency */,
+			);
+			name = "Pods-KJLoadDemo";
+			productName = "Pods-KJLoadDemo";
+			productReference = 4413014F594B712B26EC9CAB54722AC4 /* libPods-KJLoadDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = BE8C70D23A792F23C1263DC88D1AE3F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				426A14FAD950B42F5F5F4661AB6C8B63 /* KJLoadingAnimation */,
+				7751FBB28614D28B556A19AEFE44E7AA /* Pods-KJLoadDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D02EF2F22E745114D49FA84BFE4A2805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FE34B9D5A495DD6791573BBF091D6DC /* KJBallClipRotate.m in Sources */,
+				DEECEFC53D705879C6242C9CF015577B /* KJCircleStrokeSpin.m in Sources */,
+				A6F4666D1CFB2FF4C84ABF950F3F8D50 /* KJEatDoug.m in Sources */,
+				AA523328A02220E01E8A0D21615E5B86 /* KJElectrocardiogram.m in Sources */,
+				67729D8D9469A28CA39ACE6F81F133B2 /* KJGradientSnake.m in Sources */,
+				495934FD74AB88FE639E52D243AD01F9 /* KJHourGlass.m in Sources */,
+				592EADC4E34B057E4EF92BB9E8F3FEAC /* KJLineScalePulseOut.m in Sources */,
+				5F9CD57F1BF9073510375CDB6D3B3C24 /* KJLoadingAnimation-dummy.m in Sources */,
+				C962239CE801BDDD94CBA4CF7E591DAE /* KJLoadingAnimation.m in Sources */,
+				D83F77DC3C76507F9BD1B849C6B9ABA0 /* KJLoadingConfiguration.m in Sources */,
+				5ACF16F30C5E5F9E29084BE94A61FA4F /* KJLoveHeart.m in Sources */,
+				DCBA405542FB8B8CC95A6C46130C41C2 /* KJMalpositionRotate.m in Sources */,
+				2850B6581C4355DD9F5AB77E7B948590 /* KJOutwardWaves.m in Sources */,
+				66D49D2A52E895337C87D4915D703B89 /* KJPlayImages.m in Sources */,
+				E4B16F313B2ECC5B862603954E833158 /* KJThreeDots.m in Sources */,
+				C1E835F2261343B8F62206C82CC02B7B /* KJTurnedAround.m in Sources */,
+				E794EC2DDFFB306CA5D9AED9B501BACD /* KJTwoDots.m in Sources */,
+				0A9279F99AC70BC18E850307FA835BF6 /* KJWritingEffect.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F185302A31F4B11995972829CF0B089A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2699EA52C0CDC49E5A8BB2D8A8F11F2 /* Pods-KJLoadDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26E83868268BC42CD80F125BEBF44EAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KJLoadingAnimation;
+			target = 426A14FAD950B42F5F5F4661AB6C8B63 /* KJLoadingAnimation */;
+			targetProxy = 9C8D71C37CFD66DBD7B989302F737369 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		55E132225ACE5DF663E32D618B4B155B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 128F8987186117923BBB3D4CD538EFA3 /* Pods-KJLoadDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D0704410F51B1F7626BCCE615D51624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501A41ECB43F3E38FED344015A090E8D /* KJLoadingAnimation.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KJLoadingAnimation/KJLoadingAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KJLoadingAnimation;
+				PRODUCT_NAME = KJLoadingAnimation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84A06F28E9E7D9EB0A9B476A8668FD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A7F10D5FFB425266CB0AA9A21884296A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501A41ECB43F3E38FED344015A090E8D /* KJLoadingAnimation.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KJLoadingAnimation/KJLoadingAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KJLoadingAnimation;
+				PRODUCT_NAME = KJLoadingAnimation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEE4D7ABF6E4E83541F6860F1C11CC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E2DFAA931E8208BBA17647E8D0896BE /* Pods-KJLoadDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0FE574C7B3479C6425BC136AA57D8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D0EA26F9509B288A1D7A851A12870F5 /* Build configuration list for PBXNativeTarget "KJLoadingAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F10D5FFB425266CB0AA9A21884296A /* Debug */,
+				7D0704410F51B1F7626BCCE615D51624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0FE574C7B3479C6425BC136AA57D8C2 /* Debug */,
+				84A06F28E9E7D9EB0A9B476A8668FD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC4D1A38F6277F44C26D1E03A3863C5 /* Build configuration list for PBXNativeTarget "Pods-KJLoadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E132225ACE5DF663E32D618B4B155B /* Debug */,
+				CEE4D7ABF6E4E83541F6860F1C11CC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
