@@ -44,7 +44,7 @@
  pod 'KJBannerView'  # 轮播图，网络图片加载 支持网络GIF和网络图片和本地图片混合轮播
  
  加载Loading - 多种样式供选择 HUD控件封装
- pod 'KJLoading' # 加载控件
+ pod 'KJLoadingAnimation' # 加载控件
  
  菜单控件 - 下拉控件 选择控件
  pod 'KJMenuView' # 菜单控件
@@ -67,8 +67,8 @@
 
 #### <a id="Cocoapods安装"></a>Cocoapods安装
 ```
-pod 'KJLoading'
-pod 'KJLoading/KJProgressHUD'
+pod 'KJLoadingAnimation'
+pod 'KJLoadingAnimation/KJProgressHUD'
 ```
 #### <a id="更新日志"></a>更新日志
 ```

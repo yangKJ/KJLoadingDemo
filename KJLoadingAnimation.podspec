@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "KJLoading"
+  s.name         = "KJLoadingAnimation"
   s.version      = "1.2.3"
   s.summary      = "Loading Animation."
   s.homepage     = "https://github.com/yangKJ/KJLoadingDemo"
@@ -12,17 +12,17 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
   s.requires_arc = true
 
-  s.default_subspec  = 'KJLoading'
+  s.default_subspec  = 'KJLoadingAnimation'
   s.ios.source_files = 'KJLoadingDemo/KJLoadingHeader.h'
   
-  s.subspec 'KJLoading' do |ss|
+  s.subspec 'KJLoadingAnimation' do |ss|
     ss.source_files = "KJLoadingDemo/KJLoading/**/*.{h,m}"
     ss.resources = "KJLoadingDemo/KJLoading/**/*.{bundle}"
   end
 
   s.subspec 'KJProgressHUD' do |a|
     a.source_files = "KJLoadingDemo/KJProgressHUD/**/*.{h,m}"
-    a.dependency 'KJLoading/KJLoading'
+    a.dependency 'KJLoadingAnimation/KJLoadingAnimation'
   end
   
   s.frameworks = 'Foundation','UIKit','CoreText'
