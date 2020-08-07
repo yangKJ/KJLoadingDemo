@@ -7,17 +7,17 @@
 //
 
 /* 一款动画的HUD
- 使用方法：KJLoadingConfiguration 设置相关配置信息
+ 使用方法：KJProgressDeploy 设置相关配置信息
  */
 
 #import <Foundation/Foundation.h>
-#import "KJProgressConfiguration.h"
+#import "KJProgressDeploy.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KJProgressHUD : NSObject
 
-/// HUD  __nullable 可以为空 view为空展示在KeyWindow
-+ (void)kProgressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressConfiguration*__nullable)configuration;
+/// HUD  为空时展示在KeyWindow
++ (void)kProgressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressDeploy*__nullable)configuration;
 
 @end
 

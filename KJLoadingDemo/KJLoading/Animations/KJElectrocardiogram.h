@@ -1,16 +1,16 @@
 //
-//  KJCustom.h
+//  KJElectrocardiogramAnimation.h
 //  KJLoadingDemo
 //
-//  Created by 杨科军 on 2019/3/25.
+//  Created by 杨科军 on 2019/3/26.
 //  Copyright © 2019 杨科军. All rights reserved.
-//
+//  简单心电图
 
 #import "KJLoadingDeploy.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJCustom : KJLoadingDeploy
+@interface KJElectrocardiogram : KJLoadingDeploy
 
 @end
 

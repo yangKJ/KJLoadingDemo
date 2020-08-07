@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "KJLoadingAnimation.h" /// 加载动画工具
+#import "KJLoading.h" /// 加载动画工具
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *view1;
@@ -28,8 +28,8 @@
 //        [arr addObject:[UIImage imageNamed:name]];
 //    }
     
-    KJLoadingAnimation *tool = [[KJLoadingAnimation alloc]init];
-    KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
+    KJLoading *tool = [[KJLoading alloc]init];
+    KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_defaultLoadingDeploy];
     loadingConfig.kDisplayString = @"测试数据加载中...";
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypeCircleStrokeSpin;
@@ -42,19 +42,19 @@
 }
 
 - (void)xxx{
-    KJLoadingConfiguration *loadingConfig = [KJLoadingConfiguration defaultLoadingConfiguration];
+    KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_defaultLoadingDeploy];
     loadingConfig.kDisplayString = @"";
     loadingConfig.kOpenRandomType = YES;
     loadingConfig.kSize = CGSizeMake(120, 100);
     loadingConfig.kDismiss = YES;
-    [[KJLoadingAnimation kLoadingAnimation] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
+    [[KJLoading kLoadingAnimation] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
 }
 
 - (IBAction)start:(UIButton *)sender {
     [self xxx];
 }
 - (IBAction)end:(UIButton *)sender {
-    [[KJLoadingAnimation kLoadingAnimation] kLoadingAnimationStopAnimating];
+    [[KJLoading kLoadingAnimation] kLoadingAnimationStopAnimating];
 }
 
 @end

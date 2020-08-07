@@ -1,20 +1,20 @@
 //
-//  KJCustom.m
+//  KJEatDougAnimation.m
 //  KJLoadingDemo
 //
-//  Created by 杨科军 on 2019/3/25.
+//  Created by 杨科军 on 2019/3/20.
 //  Copyright © 2019 杨科军. All rights reserved.
 //
 
-#import "KJCustom.h"
+#import "KJEatDoug.h"
 
-@implementation KJCustom
+@implementation KJEatDoug
 
 - (void)kj_setAnimationFromLayer:(CALayer *)layer Size:(CGSize)size Color:(UIColor *)tintColor {
     NSTimeInterval beginTime = CACurrentMediaTime();
     
     CGFloat cookieTerminatorSize =  ceilf(size.width / 3.0f);
-    CGFloat oX = (layer.bounds.size.width) / 2.0f;
+    CGFloat oX = (layer.bounds.size.width - size.width) / 2.0f + cookieTerminatorSize * .25;
     CGFloat oY = layer.bounds.size.height / 2.0f;
     CGPoint cookieTerminatorCenter = CGPointMake(oX, oY);
     
@@ -51,6 +51,29 @@
         
         [layer addSublayer:jawLayer];
         [jawLayer addAnimation:transformAnimation forKey:@"animation"];
+    }
+    
+    CGFloat cookieSize = ceilf(size.width / 6.0f);
+    CGFloat cookiePadding = cookieSize * 2.0f;
+    for (int i = 0; i < 3; i++) {
+        CALayer *cookieLayer = [CALayer layer];
+        cookieLayer.frame = CGRectMake(cookieTerminatorCenter.x + (cookieSize + cookiePadding) * 3.0f - cookieTerminatorSize, oY - cookieSize / 2.0f, cookieSize, cookieSize);
+        cookieLayer.backgroundColor = tintColor.CGColor;
+        cookieLayer.anchorPoint = CGPointMake(0.5f, 0.5f);
+        cookieLayer.opacity = 1.0f;
+        cookieLayer.cornerRadius = cookieSize / 2.0f;
+        
+        CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+        transformAnimation.duration = 1.8f;
+        transformAnimation.beginTime = beginTime - (i * transformAnimation.duration / 3.0f);
+        transformAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(0.0f, 0.0f, 0.0f)];
+        transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-3.0f * (cookieSize + cookiePadding), 0.0f, 0.0f)];
+        transformAnimation.repeatCount = HUGE_VALF;
+        transformAnimation.removedOnCompletion = NO;
+        transformAnimation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionLinear];
+        
+        [layer addSublayer:cookieLayer];
+        [cookieLayer addAnimation:transformAnimation forKey:@"animation"];
     }
 }
 

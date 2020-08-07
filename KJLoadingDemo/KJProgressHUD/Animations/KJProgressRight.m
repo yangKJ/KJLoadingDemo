@@ -11,28 +11,23 @@
 static CGFloat lineWidth = 4.0f;
 static CGFloat circleDuriation = 0.5f;
 static CGFloat checkDuration = 0.2f;
-
 @interface KJProgressRight ()<CAAnimationDelegate>{
     CALayer *_animationLayer;
 }
-
 @end
 
 @implementation KJProgressRight
 
-- (void)setupAnimationInLayer:(CALayer *)layer withSize:(CGSize)size tintColor:(UIColor *)tintColor {
+- (void)kj_setAnimationFromLayer:(CALayer*)layer Size:(CGSize)size Color:(UIColor*)tintColor{
     CGFloat w = size.width;
     CGFloat h = size.height;
-    
     _animationLayer = [CALayer layer];
     _animationLayer.frame = CGRectMake(0, 0, w, w);
     _animationLayer.position = CGPointMake(w/2, h/2);
     [layer addSublayer:_animationLayer];
-    
-    
 }
 
-//画圆
+/// 画圆
 - (void)circleAnimationColor:(UIColor *)tintColor {
     CAShapeLayer *circleLayer = [CAShapeLayer layer];
     circleLayer.frame = _animationLayer.bounds;
@@ -41,12 +36,10 @@ static CGFloat checkDuration = 0.2f;
     circleLayer.strokeColor  = tintColor.CGColor;
     circleLayer.lineWidth = lineWidth;
     circleLayer.lineCap = kCALineCapRound;
-    
     CGFloat lineWidth = 5.0f;
     CGFloat radius = _animationLayer.bounds.size.width/2.0f - lineWidth/2.0f;
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:circleLayer.position radius:radius startAngle:-M_PI/2 endAngle:M_PI*3/2 clockwise:true];
     circleLayer.path = path.CGPath;
-    
     CABasicAnimation *circleAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     circleAnimation.duration = circleDuriation;
     circleAnimation.fromValue = @(0.0f);
@@ -55,16 +48,13 @@ static CGFloat checkDuration = 0.2f;
     [circleAnimation setValue:@"circleAnimation" forKey:@"animationName"];
     [circleLayer addAnimation:circleAnimation forKey:nil];
 }
-
-//对号
+/// 对号
 - (void)checkAnimationColor:(UIColor *)tintColor {
     CGFloat a = _animationLayer.bounds.size.width;
-    
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(a*2.7/10,a*5.4/10)];
     [path addLineToPoint:CGPointMake(a*4.5/10,a*7/10)];
     [path addLineToPoint:CGPointMake(a*7.8/10,a*3.8/10)];
-    
     CAShapeLayer *checkLayer = [CAShapeLayer layer];
     checkLayer.path = path.CGPath;
     checkLayer.fillColor = [UIColor clearColor].CGColor;
@@ -73,7 +63,6 @@ static CGFloat checkDuration = 0.2f;
     checkLayer.lineCap = kCALineCapRound;
     checkLayer.lineJoin = kCALineJoinRound;
     [_animationLayer addSublayer:checkLayer];
-    
     CABasicAnimation *checkAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     checkAnimation.duration = checkDuration;
     checkAnimation.fromValue = @(0.0f);
@@ -82,6 +71,5 @@ static CGFloat checkDuration = 0.2f;
     [checkAnimation setValue:@"checkAnimation" forKey:@"animationName"];
     [checkLayer addAnimation:checkAnimation forKey:nil];
 }
-
 
 @end

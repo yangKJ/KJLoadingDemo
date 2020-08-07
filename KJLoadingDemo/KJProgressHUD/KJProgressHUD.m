@@ -7,11 +7,10 @@
 //
 
 #import "KJProgressHUD.h"
-
 #import "KJProgressRight.h"
 
 @interface KJProgressHUD ()
-@property(nonatomic,strong) KJProgressConfiguration *kConfiguration;
+@property(nonatomic,strong) KJProgressDeploy *kConfiguration;
 @property(nonatomic,strong) UIView *coverView;
 @property(nonatomic,strong) UIView *maskingView;
 @property(nonatomic,strong) UIView *animationView;
@@ -22,7 +21,6 @@
 
 @implementation KJProgressHUD
 static KJProgressHUD *_LoadingAnimation = nil;
-
 #pragma mark - 初始化方法
 + (instancetype)kLoadingAnimation{
     @synchronized (self) {
@@ -32,42 +30,35 @@ static KJProgressHUD *_LoadingAnimation = nil;
     }
     return _LoadingAnimation;
 }
-
-+ (KJProgressHUD*)initWithLoadingAnmationConfiguration:(KJProgressConfiguration*__nullable)configuration{
++ (KJProgressHUD*)initWithLoadingAnmationConfiguration:(KJProgressDeploy*__nullable)configuration{
     @synchronized (self) {
         if (!_LoadingAnimation) {
             _LoadingAnimation = [[KJProgressHUD alloc]init];
         }
     }
-    _LoadingAnimation.kConfiguration = configuration == nil ? [KJProgressConfiguration defaultHUDConfiguration] : configuration;
+    _LoadingAnimation.kConfiguration = configuration == nil ? [KJProgressDeploy kj_defaultHUDDeploy] : configuration;
     return _LoadingAnimation;
 }
-
-/// HUD  __nullable 可以为空 view为空展示在KeyWindow
-+ (void)kProgressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressConfiguration*__nullable)configuration{
+/// HUD  为空时展示在KeyWindow
++ (void)kProgressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressDeploy*__nullable)configuration{
     if (view == nil) view = [UIApplication sharedApplication].keyWindow;
-    KJProgressHUD *_tool = [self initWithLoadingAnmationConfiguration:configuration];
-    [self kSetupWithTool:_tool View:view];
+    KJProgressHUD *tool = [self initWithLoadingAnmationConfiguration:configuration];
+    [self kSetupWithTool:tool View:view];
 }
 #pragma mark - 内部方法
 /// 布局subview
 + (void)kSetupWithTool:(KJProgressHUD*)animationTool View:(UIView*)superview{
-    /// 保存父视图
     animationTool.superView = superview;
-    /// 先移出之前的
     [self kRemove];
-    
     animationTool.coverView.frame = superview.bounds;
     animationTool.coverView.backgroundColor = animationTool.kConfiguration.kCoverBackgroundColor;
     [superview addSubview:animationTool.coverView];
     [animationTool.coverView addSubview:animationTool.maskingView];
-    /// 布局子视图
     UIView *aView = [self kGetSubviewWithTool:animationTool];
     [animationTool.maskingView addSubview:aView];
-    
-    KJProgressConfiguration *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.kConfiguration.kHUDAnimationType];
+    KJProgressDeploy *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.kConfiguration.kHUDAnimationType];
     animationTool.animationView.layer.speed = animationTool.kConfiguration.kSpeed;
-    [anmation setupAnimationInLayer:animationTool.animationView.layer withSize:animationTool.animationView.frame.size tintColor:animationTool.kConfiguration.kAnmationColor];
+    [anmation kj_setAnimationFromLayer:animationTool.animationView.layer Size:animationTool.animationView.frame.size Color:animationTool.kConfiguration.kAnmationColor];
 }
 
 - (void)kCreateGcdTimerWithEndTime:(CGFloat)endTime{
@@ -89,19 +80,14 @@ static KJProgressHUD *_LoadingAnimation = nil;
     // 启动任务, GCD计时器创建后需要手动启动
     dispatch_resume(gcdTimer);
 }
-
-
 /// 获取对应的子视图
 + (UIView*)kGetSubviewWithTool:(KJProgressHUD*)animationTool{
     KJProgressHUDType type = animationTool.kConfiguration.kHUDType;
     CGFloat w = animationTool.kConfiguration.kSize.width;
     CGFloat h = animationTool.kConfiguration.kSize.height;
-    
-    
     NSDictionary *attribute = @{NSFontAttributeName : animationTool.kConfiguration.kDisplayTitleFont};
     CGFloat xx = [animationTool.kConfiguration.kDisplayString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width + 20;
     w = w >= xx ? w : xx;
-    
     animationTool.maskingView.backgroundColor = animationTool.kConfiguration.kMaskingBackgroundColor;
     animationTool.maskingView.frame = CGRectMake(0, 0, w, h);
     animationTool.maskingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -131,16 +117,15 @@ static KJProgressHUD *_LoadingAnimation = nil;
     }
     return nil;
 }
-
 /// 获取对应的动画素材类
-+ (KJProgressConfiguration*)kGetAnimationMaterialWithAnimationType:(KJProgressHUDAnimationType)type{
++ (KJProgressDeploy*)kGetAnimationMaterialWithAnimationType:(KJProgressHUDAnimationType)type{
     switch (type) {
         case KJProgressHUDAnimationTypeCustom: return [KJProgressRight new];
     }
 }
 
 + (void)kRemove{
-    dispatch_source_cancel(_LoadingAnimation.gcdTimer);//停止计时器，停止以后就可以释放_timer了
+    dispatch_source_cancel(_LoadingAnimation.gcdTimer);
     _LoadingAnimation.gcdTimer = nil;
     _LoadingAnimation.animationView.layer.speed = 0.0f;
     _LoadingAnimation.animationView.layer.sublayers = nil;
@@ -149,9 +134,7 @@ static KJProgressHUD *_LoadingAnimation = nil;
 }
 
 #pragma mark - lazy
-- (UIView*)kCoverView{
-    return _coverView;
-}
+- (UIView*)kCoverView{ return _coverView; }
 - (UIView*)coverView{
     if (!_coverView) {
         _coverView = [UIView new];

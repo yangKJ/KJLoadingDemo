@@ -6,11 +6,11 @@
 //  Copyright © 2019 杨科军. All rights reserved.
 //  对号
 
-#import "KJProgressConfiguration.h"
+#import "KJProgressDeploy.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KJProgressRight : KJProgressConfiguration
+@interface KJProgressRight : KJProgressDeploy
 
 @end
 
