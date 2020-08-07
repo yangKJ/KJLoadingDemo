@@ -12,17 +12,17 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
   s.requires_arc = true
 
-  s.default_subspec  = 'KJLoadingAnimation'
+  s.default_subspec  = 'KJLoading'
   s.ios.source_files = 'KJLoadingDemo/KJLoadingHeader.h'
   
-  s.subspec 'KJLoadingAnimation' do |ss|
+  s.subspec 'KJLoading' do |ss|
     ss.source_files = "KJLoadingDemo/KJLoading/**/*.{h,m}"
     ss.resources = "KJLoadingDemo/KJLoading/**/*.{bundle}"
   end
 
   s.subspec 'KJProgressHUD' do |a|
     a.source_files = "KJLoadingDemo/KJProgressHUD/**/*.{h,m}"
-    a.dependency 'KJLoadingAnimation/KJLoadingAnimation'
+    a.dependency 'KJLoading/KJLoading'
   end
   
   s.frameworks = 'Foundation','UIKit','CoreText'

@@ -67,8 +67,8 @@
 
 #### <a id="Cocoapods安装"></a>Cocoapods安装
 ```
-pod 'KJLoadingAnimation'
-pod 'KJLoadingAnimation/KJProgressHUD'
+pod 'KJLoading'
+pod 'KJLoading/KJProgressHUD'
 ```
 #### <a id="更新日志"></a>更新日志
 ```

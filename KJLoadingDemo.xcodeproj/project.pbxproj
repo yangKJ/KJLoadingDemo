@@ -34,7 +34,7 @@
 		689748542248C6CB000B42D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 689748532248C6CB000B42D8 /* main.m */; };
 		68B571692248DE7000C69A75 /* KJCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B571682248DE7000C69A75 /* KJCustom.m */; };
 		68C43A7923050F17002EEC05 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68C43A7723050F17002EEC05 /* README.md */; };
-		68C43A7A23050F17002EEC05 /* KJLoadingAnimation.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 68C43A7823050F17002EEC05 /* KJLoadingAnimation.podspec */; };
+		68C43A7A23050F17002EEC05 /* KJLoading.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 68C43A7823050F17002EEC05 /* KJLoading.podspec */; };
 		68E367C6224DB2470072AC22 /* KJHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E367C5224DB2470072AC22 /* KJHourGlass.m */; };
 		68E367C9224DC2CC0072AC22 /* KJMalpositionRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E367C8224DC2CC0072AC22 /* KJMalpositionRotate.m */; };
 		68E367CC224DC8CD0072AC22 /* KJGradientSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E367CB224DC8CD0072AC22 /* KJGradientSnake.m */; };
@@ -92,7 +92,7 @@
 		68B571672248DE7000C69A75 /* KJCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJCustom.h; sourceTree = "<group>"; };
 		68B571682248DE7000C69A75 /* KJCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJCustom.m; sourceTree = "<group>"; };
 		68C43A7723050F17002EEC05 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		68C43A7823050F17002EEC05 /* KJLoadingAnimation.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KJLoadingAnimation.podspec; sourceTree = SOURCE_ROOT; };
+		68C43A7823050F17002EEC05 /* KJLoading.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KJLoading.podspec; sourceTree = SOURCE_ROOT; };
 		68E367C4224DB2470072AC22 /* KJHourGlass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJHourGlass.h; sourceTree = "<group>"; };
 		68E367C5224DB2470072AC22 /* KJHourGlass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJHourGlass.m; sourceTree = "<group>"; };
 		68E367C7224DC2CC0072AC22 /* KJMalpositionRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMalpositionRotate.h; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 				6897484F2248C6CB000B42D8 /* LaunchScreen.storyboard */,
 				689748522248C6CB000B42D8 /* Info.plist */,
 				689748532248C6CB000B42D8 /* main.m */,
-				68C43A7823050F17002EEC05 /* KJLoadingAnimation.podspec */,
+				68C43A7823050F17002EEC05 /* KJLoading.podspec */,
 				68C43A7723050F17002EEC05 /* README.md */,
 			);
 			path = KJLoadingDemo;
@@ -284,7 +284,7 @@
 				685E7DC5224DF43900275826 /* KJLoading.bundle in Resources */,
 				689748512248C6CB000B42D8 /* LaunchScreen.storyboard in Resources */,
 				68C43A7923050F17002EEC05 /* README.md in Resources */,
-				68C43A7A23050F17002EEC05 /* KJLoadingAnimation.podspec in Resources */,
+				68C43A7A23050F17002EEC05 /* KJLoading.podspec in Resources */,
 				6897484E2248C6CB000B42D8 /* Assets.xcassets in Resources */,
 				6897484C2248C6C9000B42D8 /* Main.storyboard in Resources */,
 			);
