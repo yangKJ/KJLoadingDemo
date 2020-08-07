@@ -44,7 +44,7 @@
  pod 'KJBannerView'  # 轮播图，网络图片加载 支持网络GIF和网络图片和本地图片混合轮播
  
  加载Loading - 多种样式供选择 HUD控件封装
- pod 'KJLoadingAnimation' # 加载控件
+ pod 'KJLoading' # 加载控件
  
  菜单控件 - 下拉控件 选择控件
  pod 'KJMenuView' # 菜单控件
@@ -61,9 +61,6 @@
  *
  *********************************************************************************
  */
- 
-##### Issue
-如果您在使用中有好的需求及建议，或者遇到什么bug，欢迎随时issue，我会及时的回复，有空也会不断优化更新这些库
 ```
 #### <a id="Cocoapods安装"></a>Cocoapods安装
 ```
@@ -108,13 +105,11 @@ KJLoading 内含 7 种加载动画，多种属性自定义调整
 
 #### 救救孩子吧，谢谢各位老板～～～～
 
-###### 然后重载如下方法：
-
+###### 然后重载如下方法
 ```ruby
 - (void)kj_setAnimationFromLayer:(CALayer*)layer Size:(CGSize)size Color:(UIColor*)tintColor
 ```
-###### 自定义素材使用方法：
-
+###### 自定义素材使用方法
 ```ruby
 KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_defaultLoadingDeploy];
 loadingConfig.class_name = @"KJCustom";  /// 继承的动画素材类名
@@ -122,7 +117,7 @@ loadingConfig.kType = KJLoadingAnimationTypeCustom;
 [KJLoading kLoadingAnimationStartAnimatingWithView:self.view Configuration:loadingConfig];
 ```
 ---
-遇见的bug：
+### 问题总结
 ##### 1、xib布局，如果遇见视图显示错位，并不在父视图中心位置。
 ###### 解决方案：重置父视图frame
 

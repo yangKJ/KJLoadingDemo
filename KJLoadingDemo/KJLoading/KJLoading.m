@@ -46,7 +46,7 @@ static CGFloat kAnimationHeight = 0.0;
 /// 初始化
 + (KJLoading*)initWithLoadingAnmationConfiguration:(KJLoadingDeploy*__nullable)configuration{
     @synchronized (self) { if (!_tools) _tools = [KJLoading new]; }
-    _tools.kConfiguration = configuration == nil ? [KJLoadingDeploy kj_defaultLoadingDeploy] : configuration;
+    _tools.kConfiguration = configuration == nil ? [KJLoadingDeploy kj_default] : configuration;
     return _tools;
 }
 #pragma mark - public method
@@ -57,7 +57,7 @@ static CGFloat kAnimationHeight = 0.0;
 }
 /// 开始动画
 - (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy *__nullable)configuration{
-    self.kConfiguration = configuration == nil ? [KJLoadingDeploy kj_defaultLoadingDeploy] : configuration;
+    self.kConfiguration = configuration == nil ? [KJLoadingDeploy kj_default] : configuration;
     [KJLoading kSetupWithTool:self View:view];
 }
 /// 停止

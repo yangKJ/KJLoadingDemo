@@ -10,7 +10,7 @@
 
 @implementation KJLoadingDeploy
 
-+ (instancetype)kj_defaultLoadingDeploy{
++ (instancetype)kj_default{
     CGFloat kw = [UIScreen mainScreen].bounds.size.width;
     KJLoadingDeploy *configuration = [KJLoadingDeploy new];
     /// 默认值

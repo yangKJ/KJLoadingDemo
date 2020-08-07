@@ -29,7 +29,7 @@
 //    }
     
     KJLoading *tool = [[KJLoading alloc]init];
-    KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_defaultLoadingDeploy];
+    KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_default];
     loadingConfig.kDisplayString = @"测试数据加载中...";
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypeCircleStrokeSpin;
@@ -42,7 +42,7 @@
 }
 
 - (void)xxx{
-    KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_defaultLoadingDeploy];
+    KJLoadingDeploy *loadingConfig = [KJLoadingDeploy kj_default];
     loadingConfig.kDisplayString = @"";
     loadingConfig.kOpenRandomType = YES;
     loadingConfig.kSize = CGSizeMake(120, 100);

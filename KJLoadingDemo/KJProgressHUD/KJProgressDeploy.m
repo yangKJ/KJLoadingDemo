@@ -10,7 +10,7 @@
 
 @implementation KJProgressDeploy 
 
-+ (instancetype)kj_defaultHUDDeploy{
++ (instancetype)kj_default{
     CGFloat kw = [UIScreen mainScreen].bounds.size.width;
     KJProgressDeploy *configuration = [KJProgressDeploy new];
     /// 默认值

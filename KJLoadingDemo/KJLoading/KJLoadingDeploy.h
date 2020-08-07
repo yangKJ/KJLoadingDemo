@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
 
 @interface KJLoadingDeploy : NSObject
 /** 默认加载动画配置 */
-+ (instancetype)kj_defaultLoadingDeploy;
++ (instancetype)kj_default;
 /// 动画类型 默认 "吃豆豆"
 @property (nonatomic,assign,getter=kjType) KJLoadingAnimationType kType;
 /// 播放图片, 有默认数据

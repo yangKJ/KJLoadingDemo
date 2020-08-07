@@ -31,12 +31,8 @@ static KJProgressHUD *_LoadingAnimation = nil;
     return _LoadingAnimation;
 }
 + (KJProgressHUD*)initWithLoadingAnmationConfiguration:(KJProgressDeploy*__nullable)configuration{
-    @synchronized (self) {
-        if (!_LoadingAnimation) {
-            _LoadingAnimation = [[KJProgressHUD alloc]init];
-        }
-    }
-    _LoadingAnimation.kConfiguration = configuration == nil ? [KJProgressDeploy kj_defaultHUDDeploy] : configuration;
+    @synchronized (self) { if (!_LoadingAnimation) _LoadingAnimation = [[KJProgressHUD alloc]init]; }
+    _LoadingAnimation.kConfiguration = configuration == nil ? [KJProgressDeploy kj_default] : configuration;
     return _LoadingAnimation;
 }
 /// HUD  为空时展示在KeyWindow

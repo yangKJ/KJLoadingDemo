@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KJProgressDeploy : KJLoadingDeploy
 /// 默认HUD配置
-+ (instancetype)kj_defaultHUDDeploy;
++ (instancetype)kj_default;
 /// 显示HUD类型 默认 "动画 + 文字"
 @property (nonatomic,assign) KJProgressHUDType kHUDType;
 /// 动画类型 默认"对号"
