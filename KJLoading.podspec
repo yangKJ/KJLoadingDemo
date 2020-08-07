@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "KJLoadingAnimation"
+  s.name         = "KJLoading"
   s.version      = "1.2.3"
   s.summary      = "Loading Animation."
   s.homepage     = "https://github.com/yangKJ/KJLoadingDemo"
