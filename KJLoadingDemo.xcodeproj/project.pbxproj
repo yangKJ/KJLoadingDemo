@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6805B37F25184188004EEECA /* UIView+KJLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 6805B37E25184188004EEECA /* UIView+KJLoading.m */; };
 		680EE7EE224DE25E003C1822 /* KJCircleStrokeSpin.m in Sources */ = {isa = PBXBuildFile; fileRef = 680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */; };
 		68218B092249CD9E007A5422 /* KJLoadingDeploy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AF62249CD9E007A5422 /* KJLoadingDeploy.m */; };
 		68218B0A2249CD9E007A5422 /* KJLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 68218AF72249CD9E007A5422 /* KJLoading.m */; };
@@ -41,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6805B37D25184188004EEECA /* UIView+KJLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KJLoading.h"; sourceTree = "<group>"; };
+		6805B37E25184188004EEECA /* UIView+KJLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KJLoading.m"; sourceTree = "<group>"; };
 		680E87D024DCEEA300F22C73 /* KJLoadingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJLoadingHeader.h; sourceTree = "<group>"; };
 		680EE7EC224DE25E003C1822 /* KJCircleStrokeSpin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJCircleStrokeSpin.h; sourceTree = "<group>"; };
 		680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJCircleStrokeSpin.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				68218AF72249CD9E007A5422 /* KJLoading.m */,
 				68218AF82249CD9E007A5422 /* KJLoadingDeploy.h */,
 				68218AF62249CD9E007A5422 /* KJLoadingDeploy.m */,
+				6805B37D25184188004EEECA /* UIView+KJLoading.h */,
+				6805B37E25184188004EEECA /* UIView+KJLoading.m */,
 				685E7DC4224DF43900275826 /* KJLoading.bundle */,
 				68218AFA2249CD9E007A5422 /* Animations */,
 			);
@@ -299,6 +304,7 @@
 			files = (
 				68218B0E2249CD9E007A5422 /* KJThreeDots.m in Sources */,
 				689748492248C6C9000B42D8 /* ViewController.m in Sources */,
+				6805B37F25184188004EEECA /* UIView+KJLoading.m in Sources */,
 				68E367C6224DB2470072AC22 /* KJHourGlass.m in Sources */,
 				68B571692248DE7000C69A75 /* KJCustom.m in Sources */,
 				680EE7EE224DE25E003C1822 /* KJCircleStrokeSpin.m in Sources */,

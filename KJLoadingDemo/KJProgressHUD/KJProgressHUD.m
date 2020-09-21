@@ -36,7 +36,7 @@ static KJProgressHUD *_LoadingAnimation = nil;
     return _LoadingAnimation;
 }
 /// HUD  为空时展示在KeyWindow
-+ (void)kProgressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressDeploy*__nullable)configuration{
++ (void)kj_progressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressDeploy*__nullable)configuration{
     if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     KJProgressHUD *tool = [self initWithLoadingAnmationConfiguration:configuration];
     [self kSetupWithTool:tool View:view];

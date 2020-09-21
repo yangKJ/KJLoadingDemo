@@ -12,17 +12,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KJLoading : NSObject
-+ (instancetype)kLoadingAnimation;
 /// 背景图层，用于外界操作图层
 @property(nonatomic,strong,readonly) UIView *kCoverView;
+/// 初始化
++ (instancetype)kj_initLoadingAnimation;
 /// 开始动画
-+ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy*__nullable)configuration;
++ (void)kj_loadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy*__nullable)configuration;
 /// 开始动画
-- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy*__nullable)configuration;
+- (void)kj_loadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy*__nullable)configuration;
 /// 停止
-+ (void)kLoadingAnimationStopAnimating;
++ (void)kj_loadingAnimationStopAnimating;
 /// 停止
-- (void)kLoadingAnimationStopAnimating;
+- (void)kj_loadingAnimationStopAnimating;
 
 @end
 

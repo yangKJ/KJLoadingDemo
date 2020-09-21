@@ -28,13 +28,13 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
 };
 
 @interface KJLoadingDeploy : NSObject
-/** 默认加载动画配置 */
+/// 默认加载动画配置
 + (instancetype)kj_default;
-/// 动画类型 默认 "吃豆豆"
+/// 动画类型，默认 "吃豆豆"
 @property (nonatomic,assign,getter=kjType) KJLoadingAnimationType kType;
-/// 播放图片, 有默认数据
+/// 播放图片，有默认数据
 @property(nonatomic,strong) NSArray<UIImage*> *kImages;
-/// 播放图片持续时间, 默认2.5秒
+/// 播放图片持续时间，默认2.5秒
 @property(nonatomic,assign) CGFloat kDuration;
 /// 写文字笔图片
 @property (nonatomic,strong) UIImage *writingPencil;
@@ -44,27 +44,27 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
 @property (nonatomic,assign) BOOL kOpenRandomType;
 /// 指定随机类型 默认随机全部
 @property (nonatomic,strong) NSArray *kRandomTypeArray;
-/// 动画速度 默认1.0
+/// 动画速度，默认1.0
 @property (nonatomic,assign) CGFloat kSpeed;
-/// 动画颜色 默认白色
+/// 动画颜色，默认白色
 @property (nonatomic,strong) UIColor *kAnmationColor;
-/// 尺寸 默认屏幕宽度/4
+/// 尺寸，默认屏幕宽度/4
 @property (nonatomic,assign) CGSize kSize;
-/// 显示文字 默认加载中..
+/// 显示文字，默认加载中..
 @property (nonatomic,strong) NSString *kDisplayString;
-/// 显示文字字体 默认14
+/// 显示文字字体，默认14
 @property (nonatomic,strong) UIFont *kDisplayTitleFont;
-/// 文字颜色 默认动画颜色
+/// 文字颜色，默认动画颜色
 @property (nonatomic,strong) UIColor *kTitleColor;
-/// 蒙版圆角 默认 5
+/// 蒙版圆角，默认 5
 @property (nonatomic,assign) CGFloat kMaskingCircular;
-/// 蒙版背景颜色 默认黑色50%
+/// 蒙版背景颜色，默认黑色50%
 @property (nonatomic,strong) UIColor *kMaskingBackgroundColor;
-/// 遮盖层背景颜色 默认白色50%
+/// 遮盖层背景颜色，默认白色50%
 @property (nonatomic,strong) UIColor *kCoverBackgroundColor;
-/// 开启消失动画 默认NO
+/// 开启消失动画，默认NO
 @property (nonatomic,assign) BOOL kDismiss;
-/// 开启消失动画时间 默认1秒
+/// 开启消失动画时间，默认1秒
 @property (nonatomic,assign) BOOL kDismissTime;
 
 /// 公用方法，用于子类重载

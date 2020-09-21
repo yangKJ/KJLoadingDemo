@@ -34,7 +34,7 @@
 //    loadingConfig.class_name = @"KJCustom";
     loadingConfig.kType = KJLoadingAnimationTypeCircleStrokeSpin;
 //    loadingConfig.kImages = arr;
-    [tool kLoadingAnimationStartAnimatingWithView:self.view1 Configuration:loadingConfig];
+    [tool kj_loadingAnimationStartAnimatingWithView:self.view1 Configuration:loadingConfig];
 }
 
 - (void)setNeedsFocusUpdate{
@@ -47,14 +47,14 @@
     loadingConfig.kOpenRandomType = YES;
     loadingConfig.kSize = CGSizeMake(120, 100);
     loadingConfig.kDismiss = YES;
-    [[KJLoading kLoadingAnimation] kLoadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
+    [[KJLoading kj_initLoadingAnimation] kj_loadingAnimationStartAnimatingWithView:self.view2 Configuration:loadingConfig];
 }
 
 - (IBAction)start:(UIButton *)sender {
     [self xxx];
 }
 - (IBAction)end:(UIButton *)sender {
-    [[KJLoading kLoadingAnimation] kLoadingAnimationStopAnimating];
+    [[KJLoading kj_initLoadingAnimation] kj_loadingAnimationStopAnimating];
 }
 
 @end

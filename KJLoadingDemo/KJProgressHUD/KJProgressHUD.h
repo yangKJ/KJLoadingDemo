@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KJProgressHUD : NSObject
 
 /// HUD  为空时展示在KeyWindow
-+ (void)kProgressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressDeploy*__nullable)configuration;
++ (void)kj_progressHUDWithView:(UIView*__nullable)view Configuration:(KJProgressDeploy*__nullable)configuration;
 
 @end
 

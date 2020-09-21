@@ -36,7 +36,7 @@ static KJLoading *_tools = nil;
 static CGFloat kAnimationWidth  = 0.0;
 static CGFloat kAnimationHeight = 0.0;
 #pragma mark - 初始化方法
-+ (instancetype)kLoadingAnimation{
++ (instancetype)kj_initLoadingAnimation{
     @synchronized (self) {
         if (!_tools) _tools = [[KJLoading alloc]init];
     }
@@ -50,36 +50,36 @@ static CGFloat kAnimationHeight = 0.0;
 }
 #pragma mark - public method
 /// 开始动画
-+ (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy *__nullable)configuration{
++ (void)kj_loadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy *__nullable)configuration{
     KJLoading *xx = [self initWithLoadingAnmationConfiguration:configuration];
-    [self kSetupWithTool:xx View:view];
+    [self kj_setup:xx SuperView:view];
 }
 /// 开始动画
-- (void)kLoadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy *__nullable)configuration{
+- (void)kj_loadingAnimationStartAnimatingWithView:(UIView*)view Configuration:(KJLoadingDeploy *__nullable)configuration{
     self.deploy = configuration == nil ? [KJLoadingDeploy kj_default] : configuration;
-    [KJLoading kSetupWithTool:self View:view];
+    [KJLoading kj_setup:self SuperView:view];
 }
 /// 停止
-+ (void)kLoadingAnimationStopAnimating{
++ (void)kj_loadingAnimationStopAnimating{
     if (_tools.deploy.kDismiss) {
-        [_tools kDissmissAnimation];
+        [_tools kj_dissmissAnimation];
         return;
     }
-    [_tools kRemove];
+    [_tools kj_remove];
 }
 /// 停止
-- (void)kLoadingAnimationStopAnimating{
-    [KJLoading kLoadingAnimationStopAnimating];
+- (void)kj_loadingAnimationStopAnimating{
+    [KJLoading kj_loadingAnimationStopAnimating];
 }
 
 #pragma mark - CAAnimationDelegate
 - (void)animationDidStop:(CAAnimation*)anim finished:(BOOL)flag{
-    [self kRemove];
+    [self kj_remove];
 }
 
 #pragma mark - privately method
 /// 消失动画
-- (void)kDissmissAnimation{
+- (void)kj_dissmissAnimation{
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
     animation.delegate = self;
     animation.values = @[@(0.9),@(0.8),@(0.7),@(0.6),@(0.5),@(0.4),@(0.3),@(0.2),@(0.1),@(0.0)];
@@ -91,7 +91,7 @@ static CGFloat kAnimationHeight = 0.0;
     [self.coverView.layer addAnimation:animation forKey:@"zoom"];
     [self.maskingView.layer addAnimation:animation forKey:@"zoom"];
 }
-- (void)kRemove{
+- (void)kj_remove{
     _maskingView.hidden = _coverView.hidden = YES;
     _animationView.layer.speed = 0.0f;
     _animationView.layer.sublayers = nil;
@@ -100,52 +100,52 @@ static CGFloat kAnimationHeight = 0.0;
     _maskingView = _coverView = nil;
 }
 /// 布局subview
-+ (void)kSetupWithTool:(KJLoading*)animationTool View:(UIView*)superview{
-    animationTool.superView = superview;
-    [_tools kRemove];
-    kAnimationWidth = animationTool.deploy.kSize.width;
-    kAnimationHeight = animationTool.deploy.kSize.height;
++ (void)kj_setup:(KJLoading*)loading SuperView:(UIView*)superview{
+    loading.superView = superview;
+    [_tools kj_remove];
+    kAnimationWidth  = loading.deploy.kSize.width;
+    kAnimationHeight = loading.deploy.kSize.height;
     /// 有文字的情况
-    if (![animationTool.deploy.kDisplayString isEqualToString:@""] && animationTool.deploy.kDisplayString != nil) {
-        NSDictionary *attribute = @{NSFontAttributeName : animationTool.deploy.kDisplayTitleFont};
-        CGFloat xx = [animationTool.deploy.kDisplayString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width + 20;
+    if (![loading.deploy.kDisplayString isEqualToString:@""] && loading.deploy.kDisplayString != nil) {
+        NSDictionary *attribute = @{NSFontAttributeName : loading.deploy.kDisplayTitleFont};
+        CGFloat xx = [loading.deploy.kDisplayString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width + 20;
         kAnimationWidth = kAnimationWidth >= xx ? kAnimationWidth : xx;
     }
-    [animationTool.maskingView addSubview:animationTool.animationView];
-    [animationTool.coverView addSubview:animationTool.maskingView];
-    [superview addSubview:animationTool.coverView];
+    [loading.maskingView addSubview:loading.animationView];
+    [loading.coverView addSubview:loading.maskingView];
+    [superview addSubview:loading.coverView];
     
     /// 没有文字显示的状态
-    if ([animationTool.deploy.kDisplayString isEqualToString:@""] || animationTool.deploy.kDisplayString == nil) {
+    if ([loading.deploy.kDisplayString isEqualToString:@""] || loading.deploy.kDisplayString == nil) {
         CGFloat xw = kAnimationWidth >= kAnimationHeight ? kAnimationHeight/2 : kAnimationWidth/2;
-        animationTool.animationView.frame = CGRectMake(0, 0, xw, xw);
-        animationTool.animationView.center = CGPointMake(kAnimationWidth/2, kAnimationHeight/2);
+        loading.animationView.frame = CGRectMake(0, 0, xw, xw);
+        loading.animationView.center = CGPointMake(kAnimationWidth/2, kAnimationHeight/2);
     }else{
-        animationTool.animationView.frame = CGRectMake(0, 0, animationTool.deploy.kSize.width/2, animationTool.deploy.kSize.width/2);
-        animationTool.animationView.center = CGPointMake(kAnimationWidth/2, animationTool.deploy.kSize.width/2);
-        [animationTool.maskingView addSubview:animationTool.animationLabel];
+        loading.animationView.frame = CGRectMake(0, 0, loading.deploy.kSize.width/2, loading.deploy.kSize.width/2);
+        loading.animationView.center = CGPointMake(kAnimationWidth/2, loading.deploy.kSize.width/2);
+        [loading.maskingView addSubview:loading.animationLabel];
     }
-    KJLoadingDeploy *anmation = [self kGetAnimationMaterialWithAnimationType:animationTool.deploy.kType ClassName:animationTool.deploy.class_name];
-    if (animationTool.deploy.kType == KJLoadingAnimationTypeWriting) {
-        ((KJWritingEffect*)anmation).writeString = animationTool.deploy.kDisplayString;
-        ((KJWritingEffect*)anmation).writeFont = animationTool.deploy.kDisplayTitleFont;
-        ((KJWritingEffect*)anmation).writingPencil = animationTool.deploy.writingPencil;
-    }else if (animationTool.deploy.kType == KJLoadingAnimationTypePlayImages){
-        if (animationTool.deploy.kImages == nil || animationTool.deploy.kImages.count == 0) {
-            animationTool.deploy.kImages = [self kGetFileImageNumsWithAnimationName:@"images"];
+    KJLoadingDeploy *deploy = [self kj_getDeployFromAnimationType:loading.deploy.kType ClassName:loading.deploy.class_name];
+    if (loading.deploy.kType == KJLoadingAnimationTypeWriting) {
+        ((KJWritingEffect*)deploy).writeString = loading.deploy.kDisplayString;
+        ((KJWritingEffect*)deploy).writeFont = loading.deploy.kDisplayTitleFont;
+        ((KJWritingEffect*)deploy).writingPencil = loading.deploy.writingPencil;
+    }else if (loading.deploy.kType == KJLoadingAnimationTypePlayImages){
+        if (loading.deploy.kImages == nil || loading.deploy.kImages.count == 0) {
+            loading.deploy.kImages = [self kj_getImagesWithName:@"images"];
         }
-        ((KJPlayImages*)anmation).images = animationTool.deploy.kImages;
-        ((KJPlayImages*)anmation).durat = animationTool.deploy.kDuration;
+        ((KJPlayImages*)deploy).images = loading.deploy.kImages;
+        ((KJPlayImages*)deploy).durat = loading.deploy.kDuration;
     }
-    animationTool.animationView.layer.speed = animationTool.deploy.kSpeed;
-    [anmation kj_setAnimationFromLayer:animationTool.animationView.layer Size:animationTool.animationView.frame.size Color:animationTool.deploy.kAnmationColor];
+    loading.animationView.layer.speed = loading.deploy.kSpeed;
+    [deploy kj_setAnimationFromLayer:loading.animationView.layer Size:loading.animationView.frame.size Color:loading.deploy.kAnmationColor];
     
     _tools.maskingView.hidden = _tools.coverView.hidden = NO;
 }
 /// 获取对应的动画素材类
-+ (KJLoadingDeploy*)kGetAnimationMaterialWithAnimationType:(KJLoadingAnimationType)type ClassName:(NSString*)class_name{
++ (KJLoadingDeploy*)kj_getDeployFromAnimationType:(KJLoadingAnimationType)type ClassName:(NSString*)clazz{
     switch (type) {
-        case KJLoadingAnimationTypeCustom: return [[NSClassFromString(class_name) alloc] init];
+        case KJLoadingAnimationTypeCustom: return [[NSClassFromString(clazz) alloc] init];
         case KJLoadingAnimationTypeEatDouh: return [[KJEatDoug alloc] init];
         case KJLoadingAnimationTypeThreeDots: return [[KJThreeDots alloc] init];
         case KJLoadingAnimationTypeBallClipRotate: return [[KJBallClipRotate alloc] init];
@@ -164,7 +164,7 @@ static CGFloat kAnimationHeight = 0.0;
     }
 }
 /// 获取某个文件夹下面图片张数
-+ (NSArray*)kGetFileImageNumsWithAnimationName:(NSString*)name{
++ (NSArray*)kj_getImagesWithName:(NSString*)name{
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"KJLoading" ofType:@"bundle"];
     NSString *filePath = [bundlePath stringByAppendingPathComponent:name];
     NSFileManager *fileManager = [NSFileManager defaultManager];

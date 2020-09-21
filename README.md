@@ -29,10 +29,10 @@
 *⭐️⭐️⭐️ ----- 本人其他库 ----- ⭐️⭐️⭐️
 *
  粒子效果、Button图文混排、点击事件封装、扩大点击域、点赞粒子效果，
- 手势封装、圆角渐变、倒影、投影、内阴影、内外发光处理、Xib属性，
+ 手势封装、圆角渐变、倒影、投影、内阴影、内外发光、渐变色滑块等，
  图片加工处理、滤镜渲染、泛洪算法、识别网址超链接等等
  pod 'KJEmitterView'
- pod 'KJEmitterView/Function'
+ pod 'KJEmitterView/Function'#
  pod 'KJEmitterView/Control' # 自定义控件
  
  播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
@@ -70,8 +70,8 @@ pod 'KJLoading/KJProgressHUD'
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志：
-##### Add 1.2.3
-###### 重新整理
+##### Add 1.2.4
+###### 重新整理，规范方法名
 
 ##### Add 1.2.0
 ###### 新增属性 kDismiss 和 kDismissTime 是否开启消失动画和消失时间
