@@ -45,7 +45,7 @@
 - (KJLoadingAnimationType)kjType{
     if (_kOpenRandomType) {
         NSInteger ran = arc4random() % _kRandomTypeArray.count;
-        return [_kRandomTypeArray[ran] integerValue];
+        return (KJLoadingAnimationType)[_kRandomTypeArray[ran] integerValue];
     }else{
         return _kType;
     }

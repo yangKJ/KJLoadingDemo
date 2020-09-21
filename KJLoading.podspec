@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJLoading"
-  s.version      = "1.2.4"
+  s.version      = "1.2.5"
   s.summary      = "Loading Animation."
   s.homepage     = "https://github.com/yangKJ/KJLoadingDemo"
   s.license      = "MIT"
@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.default_subspec  = 'KJLoading'
-  s.ios.source_files = 'KJLoadingDemo/KJLoadingHeader.h'
+  s.ios.source_files = "KJLoadingDemo/KJLoading/*.{h,m}"
   
-  s.subspec 'KJLoading' do |ss|
-    ss.source_files = "KJLoadingDemo/KJLoading/*.{h,m}"
-    ss.resources = "KJLoadingDemo/KJLoading/**/*.{bundle}","KJLoadingDemo/KJLoading/Animations/*.{h,m}"
+  s.subspec 'Loadings' do |ss|
+    ss.source_files = "KJLoadingDemo/LoadAnimations/*.{h,m}"
+    ss.resources = "KJLoadingDemo/LoadAnimations/*.{bundle}"
   end
 
   s.subspec 'KJProgressHUD' do |a|
