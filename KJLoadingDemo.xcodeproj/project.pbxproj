@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		6805B37D25184188004EEECA /* UIView+KJLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KJLoading.h"; sourceTree = "<group>"; };
 		6805B37E25184188004EEECA /* UIView+KJLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KJLoading.m"; sourceTree = "<group>"; };
+		680E87D024DCEEA300F22C73 /* KJLoadingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJLoadingHeader.h; sourceTree = "<group>"; };
 		680EE7EC224DE25E003C1822 /* KJCircleStrokeSpin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJCircleStrokeSpin.h; sourceTree = "<group>"; };
 		680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJCircleStrokeSpin.m; sourceTree = "<group>"; };
 		68218AF62249CD9E007A5422 /* KJLoadingDeploy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJLoadingDeploy.m; sourceTree = "<group>"; };
@@ -123,14 +124,15 @@
 				68218AF62249CD9E007A5422 /* KJLoadingDeploy.m */,
 				6805B37D25184188004EEECA /* UIView+KJLoading.h */,
 				6805B37E25184188004EEECA /* UIView+KJLoading.m */,
+				685E7DC4224DF43900275826 /* KJLoading.bundle */,
+				68218AFA2249CD9E007A5422 /* Animations */,
 			);
 			path = KJLoading;
 			sourceTree = "<group>";
 		};
-		68218AFA2249CD9E007A5422 /* LoadAnimations */ = {
+		68218AFA2249CD9E007A5422 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				685E7DC4224DF43900275826 /* KJLoading.bundle */,
 				68218AFB2249CD9E007A5422 /* KJBallClipRotate.h */,
 				68218B032249CD9E007A5422 /* KJBallClipRotate.m */,
 				68218B012249CD9E007A5422 /* KJEatDoug.h */,
@@ -162,7 +164,7 @@
 				680EE7EC224DE25E003C1822 /* KJCircleStrokeSpin.h */,
 				680EE7ED224DE25E003C1822 /* KJCircleStrokeSpin.m */,
 			);
-			path = LoadAnimations;
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		6860DEE52256D839007C062D /* KJProgressHUD */ = {
@@ -205,9 +207,9 @@
 		689748432248C6C9000B42D8 /* KJLoadingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				680E87D024DCEEA300F22C73 /* KJLoadingHeader.h */,
 				6860DEE52256D839007C062D /* KJProgressHUD */,
 				68218AF52249CD9E007A5422 /* KJLoading */,
-				68218AFA2249CD9E007A5422 /* LoadAnimations */,
 				689748442248C6C9000B42D8 /* AppDelegate.h */,
 				689748452248C6C9000B42D8 /* AppDelegate.m */,
 				689748472248C6C9000B42D8 /* ViewController.h */,
