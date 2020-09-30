@@ -7,7 +7,7 @@
 //
 
 #import "HUDViewController.h"
-
+#import "KJLoadingHeader.h"
 @interface HUDViewController ()
 
 @end
@@ -17,10 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (IBAction)but:(UIButton *)sender {
-    
+    [self.view kj_displayLoadingWithTitle:@"1234"];
 }
 
 

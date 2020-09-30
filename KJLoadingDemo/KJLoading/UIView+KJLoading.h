@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "KJLoading.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (KJLoading)
+/// 显示加载框
+- (void)kj_displayLoading;
+- (void)kj_displayLoadingWithTitle:(NSString*)title;
+/// 隐藏加载框
+- (void)kj_dismissLodaing;
 
 @end
 

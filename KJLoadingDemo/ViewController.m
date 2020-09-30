@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "KJLoading.h" /// 加载动画工具
+#import "KJLoadingHeader.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *view1;

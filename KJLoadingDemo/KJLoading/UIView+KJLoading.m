@@ -9,5 +9,20 @@
 #import "UIView+KJLoading.h"
 
 @implementation UIView (KJLoading)
+/// 显示加载框
+- (void)kj_displayLoading{
+    [self kj_displayLoadingWithTitle:@""];
+}
+- (void)kj_displayLoadingWithTitle:(NSString*)title{
+    KJLoadingDeploy *con = [KJLoadingDeploy kj_default];
+    con.kSize = CGSizeMake(70, 70);
+    con.kDisplayString = title;
+    con.kType = KJLoadingAnimationTypeCircleStrokeSpin;
+    [KJLoading kj_loadingAnimationStartAnimatingWithView:self Configuration:con];
+}
+/// 隐藏加载框
+- (void)kj_dismissLodaing{
+    [KJLoading kj_loadingAnimationStopAnimating];
+}
 
 @end

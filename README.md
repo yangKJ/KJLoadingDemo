@@ -77,6 +77,9 @@ pod 'KJLoading/KJProgressHUD'
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志：
+##### Add 1.2.5
+###### UIView+KJLoading 封装
+
 ##### Add 1.2.4
 ###### 重新整理，规范方法名
 

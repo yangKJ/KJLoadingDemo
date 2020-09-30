@@ -54,6 +54,7 @@ Github地址：https://github.com/yangKJ
 #define KJLoadingHeader_h
 
 #import "KJLoading.h"
+#import "UIView+KJLoading.h"
 //#import "KJProgressHUD.h" /// HUD
 
 #endif /* KJLoadingHeader_h */
