@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.default_subspec  = 'KJLoading'
-  s.ios.source_files = 'KJLoadingDemo/KJLoadingHeader.h'
+  s.ios.source_files = "KJLoadingDemo/KJLoading/*.{h,m}"
   
   s.subspec 'KJLoading' do |ss|
     ss.source_files = "KJLoadingDemo/KJLoading/**/*.{h,m}"
