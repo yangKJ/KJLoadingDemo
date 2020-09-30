@@ -95,6 +95,7 @@
 		68B571682248DE7000C69A75 /* KJCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJCustom.m; sourceTree = "<group>"; };
 		68C43A7723050F17002EEC05 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		68C43A7823050F17002EEC05 /* KJLoading.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KJLoading.podspec; sourceTree = SOURCE_ROOT; };
+		68DF0D06252429C800367141 /* _KJLoadingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _KJLoadingHeader.h; sourceTree = "<group>"; };
 		68E367C4224DB2470072AC22 /* KJHourGlass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJHourGlass.h; sourceTree = "<group>"; };
 		68E367C5224DB2470072AC22 /* KJHourGlass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJHourGlass.m; sourceTree = "<group>"; };
 		68E367C7224DC2CC0072AC22 /* KJMalpositionRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMalpositionRotate.h; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		68218AF52249CD9E007A5422 /* KJLoading */ = {
 			isa = PBXGroup;
 			children = (
+				68DF0D06252429C800367141 /* _KJLoadingHeader.h */,
 				68218AF92249CD9E007A5422 /* KJLoading.h */,
 				68218AF72249CD9E007A5422 /* KJLoading.m */,
 				68218AF82249CD9E007A5422 /* KJLoadingDeploy.h */,

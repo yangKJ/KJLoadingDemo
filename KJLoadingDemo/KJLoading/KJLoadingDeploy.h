@@ -4,7 +4,7 @@
 //
 //  Created by 杨科军 on 2019/3/20.
 //  Copyright © 2019 杨科军. All rights reserved.
-//
+//  配置信息
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -12,7 +12,7 @@ typedef NS_ENUM(NSUInteger, KJLoadingAnimationType) {
     KJLoadingAnimationTypeCustom = 0, /// 自定义
     KJLoadingAnimationTypePlayImages, /// 播放指定图片
     KJLoadingAnimationTypeWriting, /// 写文字加载
-    KJLoadingAnimationTypeEatDouh,   /// 吃豆豆
+    KJLoadingAnimationTypeEatDouh, /// 吃豆豆
     KJLoadingAnimationTypeTwoDots, /// 大小点
     KJLoadingAnimationTypeThreeDots, /// 三个横排闪烁点
     KJLoadingAnimationTypeBallClipRotate, /// 不规则圆旋转

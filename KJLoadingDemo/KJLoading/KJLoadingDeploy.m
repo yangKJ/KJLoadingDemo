@@ -12,10 +12,10 @@
 
 + (instancetype)kj_default{
     CGFloat kw = [UIScreen mainScreen].bounds.size.width;
-    KJLoadingDeploy *configuration = [KJLoadingDeploy new];
+    KJLoadingDeploy *deploy = [KJLoadingDeploy new];
     /// 默认值
-    configuration.kOpenRandomType = NO;
-    configuration.kRandomTypeArray = @[@(KJLoadingAnimationTypeEatDouh),
+    deploy.kOpenRandomType = NO;
+    deploy.kRandomTypeArray = @[@(KJLoadingAnimationTypeEatDouh),
                                        @(KJLoadingAnimationTypeThreeDots),
                                        @(KJLoadingAnimationTypeBallClipRotate),
                                        @(KJLoadingAnimationTypeLineScalePulseOut),
@@ -25,27 +25,27 @@
                                        @(KJLoadingAnimationTypeHourGlass),
                                        @(KJLoadingAnimationTypeCircleStrokeSpin),
                                        ];
-    configuration.kType = KJLoadingAnimationTypeEatDouh;
-    configuration.kSpeed = 1.0;
-    configuration.writingPencil = [UIImage imageNamed:@"KJLoading.bundle/pencil.png"];
-    configuration.kAnmationColor = UIColor.whiteColor;
-    configuration.kSize = CGSizeMake(kw / 4, kw / 4 + 10);
-    configuration.kDisplayString = @"加载中..";
-    configuration.kDisplayTitleFont = [UIFont systemFontOfSize:(14)];
-    configuration.kTitleColor = configuration.kAnmationColor;
-    configuration.kMaskingCircular = 5.0;
-    configuration.kMaskingBackgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    configuration.kCoverBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-    configuration.kDuration = 2.5;
-    configuration.kDismiss = NO;
-    configuration.kDismissTime = 1.0;
+    deploy.kType = KJLoadingAnimationTypeEatDouh;
+    deploy.kSpeed = 1.0;
+    deploy.writingPencil = [UIImage imageNamed:@"KJLoading.bundle/pencil.png"];
+    deploy.kAnmationColor = UIColor.whiteColor;
+    deploy.kSize = CGSizeMake(kw/4, kw/4+10);
+    deploy.kDisplayString = @"加载中..";
+    deploy.kDisplayTitleFont = [UIFont systemFontOfSize:(14)];
+    deploy.kTitleColor = deploy.kAnmationColor;
+    deploy.kMaskingCircular = 5.0;
+    deploy.kMaskingBackgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    deploy.kCoverBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    deploy.kDuration = 2.5;
+    deploy.kDismiss = NO;
+    deploy.kDismissTime = 1.0;
     
-    return configuration;
+    return deploy;
 }
 - (KJLoadingAnimationType)kjType{
     if (_kOpenRandomType) {
         NSInteger ran = arc4random() % _kRandomTypeArray.count;
-        return [_kRandomTypeArray[ran] integerValue];
+        return (KJLoadingAnimationType)[_kRandomTypeArray[ran] integerValue];
     }else{
         return _kType;
     }
